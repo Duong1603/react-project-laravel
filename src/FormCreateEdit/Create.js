@@ -22,7 +22,6 @@ const Create = () => {
     return (
 
         <div>
-            <h1>HELLO mỸ lINH</h1>
             <Button
                 color="danger"
                 onClick={handleCloseShow}
