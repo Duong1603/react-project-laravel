@@ -24,8 +24,8 @@ yarn-error.log*
 
 # deploy to hosting firebase
 .firebase
-/firebase.json 
-firebaserc
+firebase.json 
+.firebaserc
 
 
 
