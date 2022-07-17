@@ -8,28 +8,22 @@ export default function Header() {
                 <div className="row">
                     <div className="col-sm-8 text-sm">
                     <div className="site-info">
-                        <a href="#">
-                        <span className="mai-call text-primary" /> +00 123 4455 6666
+                        <a href="tel:0967733703">
+                        <span className="mai-call text-primary" /> 0967733703
                         </a>
                         <span className="divider">|</span>
-                        <a href="#">
-                        <span className="mai-mail text-primary" /> mail@example.com
+                        <a href="mailto:Phionapham87@gmail.com">
+                        <span className="mai-mail text-primary" /> Phionapham87@gmail.com
                         </a>
                     </div>
                     </div>
                     <div className="col-sm-4 text-right text-sm">
                     <div className="social-mini-button">
                         <a href="#">
-                        <span className="mai-logo-facebook-f" />
+                        <img style={{width:'1.5rem'}} src="assets/fonts/vietnam.svg"/>
                         </a>
                         <a href="#">
-                        <span className="mai-logo-twitter" />
-                        </a>
-                        <a href="#">
-                        <span className="mai-logo-dribbble" />
-                        </a>
-                        <a href="#">
-                        <span className="mai-logo-instagram" />
+                        <img style={{width:'1.5rem'}} src="assets/fonts/united-kingdom.svg"/>
                         </a>
                     </div>
                     </div>
@@ -85,7 +79,7 @@ export default function Header() {
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="doctors.html">
-                        Doctors
+                        Session
                         </a>
                     </li>
                     <li className="nav-item">
@@ -98,11 +92,11 @@ export default function Header() {
                         Contact
                         </a>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <a className="btn btn-primary ml-lg-3" href="#">
                         Login / Register
                         </a>
-                    </li>
+                    </li> */}
                     </ul>
                 </div>{" "}
                 {/* .navbar-collapse */}

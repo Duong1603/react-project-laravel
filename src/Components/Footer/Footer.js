@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
     return (
-        <footer className="page-footer">
+        <footer className="page-footer ">
             <div className="container">
                 <div className="row px-md-3">
                     <div className="col-sm-6 col-lg-3 py-3">
@@ -58,11 +58,12 @@ export default function Footer() {
                         <p className="footer-link mt-2">
                         351 Willow Street Franklin, MA 02038
                         </p>
-                        <a href="#" className="footer-link">
-                        701-573-7582
+                        <a href="tel:0977733703" className="footer-link">
+                        097 7733 703
                         </a>
-                        <a href="#" className="footer-link">
-                        healthcare@temporary.net
+                        <a href="mailto:Phionapham87@gmail.com"
+                        className="footer-link">
+                        Phionapham87@gmail.com
                         </a>
                         <h5 className="mt-3">Social Media</h5>
                         <div className="footer-sosmed mt-3">
@@ -70,7 +71,7 @@ export default function Footer() {
                             <span className="mai-logo-facebook-f" />
                         </a>
                         <a href="#" target="_blank">
-                            <span className="mai-logo-twitter" />
+                            <span className="mai-logo-twitter " />
                         </a>
                         <a href="#" target="_blank">
                             <span className="mai-logo-google-plus-g" />
@@ -86,9 +87,9 @@ export default function Footer() {
                 </div>
                 <hr />
                 <p id="copyright">
-                Copyright © 2020{" "}
-                <a href="https://macodeid.com/" target="_blank">
-                    MACode ID
+                Copyright © 2022{" "}
+                <a href="https://www.passerellesnumeriques.org/en/our-actions/vietnam/" target="_blank">
+                Passerelles numériques Vietnam
                 </a>
                 . All right reserved
                 </p>
