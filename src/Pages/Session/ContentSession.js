@@ -1,61 +1,63 @@
+
 import React from "react";
 import Session from "./Session.css";
+
 export default function ContentSession() {
   return (
-    <>
-     <div
-            className="page-hero bg-image overlay-dark"
-            style={{ backgroundImage: "url(../assets/img/bg_image_1.jpg)" }}
-        >
-            <div className="hero-section">
-            <div className="container text-center wow zoomIn">
-                <span className="subhead">Let's make your life happier</span>
-                <h1 className="display-4">Healthy Living</h1>
-                <a href="#" className="btn btn-primary">
-                Let's Consult
-                </a>
-            </div>
-            </div>
+    <div className="container-session">
+      <div
+        className="page-hero bg-image overlay-dark"
+        style={{ backgroundImage: "url(../assets/img/bg_image_1.jpg)" }}
+      >
+        <div className="hero-section">
+          <div className="container text-center wow zoomIn">
+            <span className="subhead">Let's make your life happier</span>
+            <h1 className="display-4">Healthy Living</h1>
+            <a href="#" className="btn btn-primary">
+              Let's Consult
+            </a>
+          </div>
         </div>
-        <div className="bg-light">
-            <div className="page-section py-3 mt-md-n5 custom-index">
-            <div className="container">
-                <div className="row justify-content-center">
-                <div className="col-md-4 py-3 py-md-0">
-                    <div className="card-service wow fadeInUp">
-                    <div className="circle-shape bg-secondary text-white">
-                        <span className="mai-chatbubbles-outline" />
-                    </div>
-                    <p>
-                        <span>Chat</span> with a doctors
-                    </p>
-                    </div>
+      </div>
+      <div className="bg-light">
+        <div className="page-section py-3 mt-md-n5 custom-index">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-md-4 py-3 py-md-0">
+                <div className="card-service wow fadeInUp">
+                  <div className="circle-shape bg-secondary text-white">
+                    <span className="mai-chatbubbles-outline" />
+                  </div>
+                  <p>
+                    <span>Chat</span> with a doctors
+                  </p>
                 </div>
-                <div className="col-md-4 py-3 py-md-0">
-                    <div className="card-service wow fadeInUp">
-                    <div className="circle-shape bg-primary text-white">
-                        <span className="mai-shield-checkmark" />
-                    </div>
-                    <p>
-                        <span>One</span>-Health Protection
-                    </p>
-                    </div>
+              </div>
+              <div className="col-md-4 py-3 py-md-0">
+                <div className="card-service wow fadeInUp">
+                  <div className="circle-shape bg-primary text-white">
+                    <span className="mai-shield-checkmark" />
+                  </div>
+                  <p>
+                    <span>One</span>-Health Protection
+                  </p>
                 </div>
-                <div className="col-md-4 py-3 py-md-0">
-                    <div className="card-service wow fadeInUp">
-                    <div className="circle-shape bg-accent text-white">
-                        <span className="mai-basket" />
-                    </div>
-                    <p>
-                        <span>One</span>-Health Pharmacy
-                    </p>
-                    </div>
+              </div>
+              <div className="col-md-4 py-3 py-md-0">
+                <div className="card-service wow fadeInUp">
+                  <div className="circle-shape bg-accent text-white">
+                    <span className="mai-basket" />
+                  </div>
+                  <p>
+                    <span>One</span>-Health Pharmacy
+                  </p>
                 </div>
-                </div>
+              </div>
             </div>
-            </div>
+          </div>
         </div>
-        {/* .bg-light */}
+      </div>
+      {/* .bg-light */}
       <div className="page-section">
         <div className="container">
           <div className="page-session-information">
@@ -92,9 +94,9 @@ export default function ContentSession() {
           </p>
           <div className="owl-carousel wow fadeInUp" id="doctorSlideshow">
             <div className="item">
-              <div className="card-doctor">
+              <div className="card-doctor" id="border-card">
                 <div className="header">
-                  <img src="../assets/img/doctors/doctor_1.jpg" alt="" className ="image-session"/>
+                  <img src="../assets/img/doctors/doctor_1.jpg" alt="" className="image-session" />
                   <div className="meta">
                     <a href="#">
                       <span className="mai-call" />
@@ -104,16 +106,17 @@ export default function ContentSession() {
                     </a>
                   </div>
                 </div>
-                <div className="body">
-                  <strong><p className="text-center xl-4">FREE DISCOVERY CALL</p></strong>
-                  <p className="text-center mb text-grey">Get in touch with Phi Phi for 30 mintues to discover what RTT can help with your problesm</p>
-                </div>
+
+              </div>
+              <div className="body" id="title-name">
+                <strong><h5 className="text-center xl-4">FREE DISCOVERY CALL</h5></strong>
+                <p className="text-center mb text-grey" id="color-item-text">Get in touch with Phi Phi for 30 minutes</p>
               </div>
             </div>
             <div className="item">
-              <div className="card-doctor">
+              <div className="card-doctor" id="border-card">
                 <div className="header">
-                  <img src="../assets/img/doctors/doctor_2.jpg" alt="" className ="image-session"/>
+                  <img src="../assets/img/doctors/doctor_2.jpg" alt="" className="image-session" />
                   <div className="meta">
                     <a href="#">
                       <span className="mai-call" />
@@ -123,16 +126,16 @@ export default function ContentSession() {
                     </a>
                   </div>
                 </div>
-                <div className="body">
-                <strong><p className="text-center xl-4">ONE SESSION</p></strong>
-                  <p className="text-center mb text-grey">Workouts to help you lose weight and build lean muscle</p>
-                </div>
+              </div>
+              <div className="body" id="title-name">
+                <strong><h5 className="text-center xl-4">ONE SESSION</h5></strong>
+                <p className="text-center mb text-grey" id="color-item-text">Phi Phi brings to you 1:1 private session either online via zoom or offline at her facility.</p>
               </div>
             </div>
             <div className="item">
-              <div className="card-doctor">
+              <div className="card-doctor" id="border-card">
                 <div className="header">
-                  <img src="../assets/img/doctors/doctor_3.jpg" alt="" className ="image-session"/>
+                  <img src="../assets/img/doctors/doctor_3.jpg" alt="" className="image-session" />
                   <div className="meta">
                     <a href="#">
                       <span className="mai-call" />
@@ -142,15 +145,16 @@ export default function ContentSession() {
                     </a>
                   </div>
                 </div>
-                <div className="body">
-                <strong><p className="text-center xl-4">PACKAGE OF THREE</p></strong>
-                  <p className="text-center mb text-grey">Workouts to improve mobility and function post-injury</p>
-                </div>
+
+              </div>
+              <div className="body" id="title-name">
+                <strong><h5 className="text-center xl-4">PACKAGE OF THREE</h5></strong>
+                <p className="text-center mb text-grey" id="color-item-text"> Book 3 sessions at one for the best price possible.  (9 000 000 VND)</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,7 +1,30 @@
-.image-session{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 0;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Roboto:wght@100&display=swap');
+.image-session{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 65px;
+}
+.container-session{
+    color:white;
+/* color-background:#487E81; */
+background-color:#487E81 ;
+}
+#title-name{
+    padding: 10% 15%;
+    color:white;
+}
+
+.card-doctor .header {
+    border-top-right-radius: 65px;
+    /* color:white; */
+}
+
+#border-card{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 65px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius:0px;
+}
+#color-item-text{
+    color:#c7dad3 !important;
 }
