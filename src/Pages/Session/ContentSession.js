@@ -1,11 +1,9 @@
-
 import React from "react";
 import Session from "./Session.css";
-
 export default function ContentSession() {
   return (
     <div className="container-session">
-      <div
+      {/* <div
         className="page-hero bg-image overlay-dark"
         style={{ backgroundImage: "url(../assets/img/bg_image_1.jpg)" }}
       >
@@ -18,8 +16,8 @@ export default function ContentSession() {
             </a>
           </div>
         </div>
-      </div>
-      <div className="bg-light">
+      </div> */}
+      {/* <div className="bg-light">
         <div className="page-section py-3 mt-md-n5 custom-index">
           <div className="container">
             <div className="row justify-content-center">
@@ -56,7 +54,7 @@ export default function ContentSession() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* .bg-light */}
       <div className="page-section">
         <div className="container">
