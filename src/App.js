@@ -4,6 +4,7 @@ import Home from "./Pages/Home/Home";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import Session from "./Pages/Session/Session";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,7 +24,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 function App() {
-  return <Home />;
+  // return <Home />;
+  return <Session></Session>
 }
 
 export default App;
