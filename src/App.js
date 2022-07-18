@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { publicRoutes } from "./routes";
 // code for firebase
 // --------------------------------------------------------------//
 // // Import the functions you need from the SDKs you need
@@ -27,8 +27,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 function App() {
     return (
         <Router>
