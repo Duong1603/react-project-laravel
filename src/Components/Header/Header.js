@@ -36,7 +36,7 @@ export default function Header() {
             <nav className="navbar navbar-expand-lg navbar-light shadow-sm">
                 <div className="container">
                 <a className="navbar-brand" href="#">
-                    <span className="text-primary">One Test</span>-Health
+                    <span className="text-primary">One</span>-Health
                 </a>
                 <form action="#">
                     <div className="input-group input-navbar">

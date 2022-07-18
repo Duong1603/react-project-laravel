@@ -196,6 +196,10 @@ img {
   vertical-align: middle;
   border-style: none;
 }
+.small-img{
+  width: 170px;
+  margin-top: 305px;
+}
 
 svg {
   overflow: hidden;
@@ -360,8 +364,16 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2;
 }
 
-h1, .h1 {
-  font-size: 2.5rem;
+h1 {
+  text-align: center;
+  font-size: 3rem;
+ 
+}
+.text-about{
+  color:#09474B;
+}
+.font-weight-normal{
+  padding: 150px 300px 150px 300px;
 }
 
 h2, .h2 {
