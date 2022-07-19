@@ -1,5 +1,5 @@
 import React from "react";
-import Session from "./Session.css";
+import "./Session.css";
 export default function ContentSession() {
   return (
     <div className="container-session">
