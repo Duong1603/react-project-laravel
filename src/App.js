@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./routes";
+import 'antd/dist/antd.css'; 
 // code for firebase
 // --------------------------------------------------------------//
 // // Import the functions you need from the SDKs you need
