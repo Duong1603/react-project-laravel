@@ -43,7 +43,7 @@ export default function ContentSession() {
                 <div className="header">
                   <img src="../assets/img/doctors/doctor_1.jpg" alt="" className="image-session" />
                   <div className="meta" id="Book">
-                    <a>Book</a>                  
+                    <a href=" #">Book</a>                  
                   </div>
                 </div>
               </div>
@@ -57,7 +57,7 @@ export default function ContentSession() {
                 <div className="header">
                   <img src="../assets/img/doctors/doctor_2.jpg" alt="" className="image-session" />
                   <div className="meta" id="Book">
-                    <a>Book</a>                  
+                    <a href=" #">Book</a>                  
                   </div>
                 </div>
               </div>
@@ -71,7 +71,7 @@ export default function ContentSession() {
                 <div className="header">
                   <img src="../assets/img/doctors/doctor_3.jpg" alt="" className="image-session" />
                   <div className="meta" id="Book">
-                    <a>Book</a>                  
+                    <a href=" #">Book</a>                  
                   </div>
                 </div>
               </div>
