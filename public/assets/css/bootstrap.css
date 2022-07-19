@@ -370,7 +370,10 @@ h1 {
  
 }
 .text-about{
-  color:#09474B;
+  color:white;
+}
+#about-rtt{
+  color: white;
 }
 .font-weight-normal{
   padding: 150px 300px 150px 300px;
@@ -557,6 +560,22 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+.slogan{
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  border: 1px solid white;
+  color: white;
+  padding: 3px 60px 3px 60px;
+}
+.slogan-btn{
+  text-align: center;
+  margin-bottom: 100px;
+}
+.page-section #text-slogan{
+  text-align: center;
+  font-size: 4rem;
 }
 
 @media (min-width: 576px) {
