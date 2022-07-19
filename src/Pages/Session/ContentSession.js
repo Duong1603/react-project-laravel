@@ -42,16 +42,10 @@ export default function ContentSession() {
               <div className="card-doctor" id="border-card">
                 <div className="header">
                   <img src="../assets/img/doctors/doctor_1.jpg" alt="" className="image-session" />
-                  <div className="meta">
-                    <a href="#">
-                      <span className="mai-call" />
-                    </a>
-                    <a href="#">
-                      <span className="mai-logo-whatsapp" />
-                    </a>
+                  <div className="meta" id="Book">
+                    <a>Book</a>                  
                   </div>
                 </div>
-
               </div>
               <div className="body" id="title-name">
                 <strong><h5 className="text-center xl-4">FREE DISCOVERY CALL</h5></strong>
@@ -62,13 +56,8 @@ export default function ContentSession() {
               <div className="card-doctor" id="border-card">
                 <div className="header">
                   <img src="../assets/img/doctors/doctor_2.jpg" alt="" className="image-session" />
-                  <div className="meta">
-                    <a href="#">
-                      <span className="mai-call" />
-                    </a>
-                    <a href="#">
-                      <span className="mai-logo-whatsapp" />
-                    </a>
+                  <div className="meta" id="Book">
+                    <a>Book</a>                  
                   </div>
                 </div>
               </div>
@@ -81,16 +70,10 @@ export default function ContentSession() {
               <div className="card-doctor" id="border-card">
                 <div className="header">
                   <img src="../assets/img/doctors/doctor_3.jpg" alt="" className="image-session" />
-                  <div className="meta">
-                    <a href="#">
-                      <span className="mai-call" />
-                    </a>
-                    <a href="#">
-                      <span className="mai-logo-whatsapp" />
-                    </a>
+                  <div className="meta" id="Book">
+                    <a>Book</a>                  
                   </div>
                 </div>
-
               </div>
               <div className="body" id="title-name">
                 <strong><h5 className="text-center xl-4">PACKAGE OF THREE</h5></strong>

@@ -28,3 +28,15 @@ background-color:#487E81 ;
 #color-item-text{
     color:#c7dad3 !important;
 }
+#Book {   
+    top: 50%;
+    left: 15%;
+ 
+}
+#Book a{
+    /* border: 3px; */
+    -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+    width: 60%;
+}
