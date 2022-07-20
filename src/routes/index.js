@@ -33,7 +33,7 @@ const publicRoutes = [
     component: IndexBlog,
   },
   {
-    path: "/detailblog",
+    path: "/detail-blog",
     component: IndexDetail,
   },
 ];
