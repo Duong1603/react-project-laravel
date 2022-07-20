@@ -1,17 +1,19 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Roboto:wght@100&display=swap');
-.image-session{
+
+.image-session {
     border-top-left-radius: 0px;
     border-top-right-radius: 65px;
 }
-.container-session{
-    color:white;
-/* color-background:#487E81; */
-background-color:#487E81 ;
+
+.container-session {
+    color: white;
+    /* color-background:#487E81; */
+    background-color: #487E81;
 }
-#title-name{
+
+#title-name {
     padding: 10% 15%;
-    color:white;
+    color: white;
 }
 
 .card-doctor .header {
@@ -19,32 +21,88 @@ background-color:#487E81 ;
     /* color:white; */
 }
 
-#border-card{
+#border-card {
     border-top-left-radius: 0px;
     border-top-right-radius: 65px;
     border-bottom-right-radius: 0px;
-    border-bottom-left-radius:0px;
+    border-bottom-left-radius: 0px;
 }
-#color-item-text{
-    color:#c7dad3 !important;
+
+#color-item-text {
+    color: #c7dad3 !important;
 }
-#Book {   
+
+#Book {
     top: 50%;
     left: 15%;
- 
+
 }
-#Book a{
-    /* border: 3px; */
+
+#Book a {
     -webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     width: 60%;
 }
-#more {display: none;}
-#txtArea{
+
+#more {
+    display: none;
+}
+
+#txtArea {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     border-radius: 10px;
 }
+.read-or-hide{
+    color: rgb(35, 31, 31);
+    cursor: pointer;
+  }
+
+  /*--------  */
+  .inputComment[type=submit]{
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    color: #171515;
+    border-radius: 2em;
+    border: 0.15em solid #F9C23C;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  .inputComment[type="submit"]:hover {
+      color: #fff;
+      background-color: #EAA502;
+      border-color: #EAA502;
+      background-position: 0.75em bottom;
+      -webkit-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+  }
+  .inputComment[type="submit"]:focus {
+      background-position: 2em -4em;
+      -webkit-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+  }
+  /* --------- */
+  .text{
+
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  
+  @keyframes example {
+    0%  {bottom:10px; top:200px;}
+    
+    25%  {bottom:10px; top:200px;}
+    75%  {top:0px; bottom:200px;}
+    100%  {top:0px; bottom:200px;}
+    
+    
+  }
