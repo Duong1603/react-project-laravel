@@ -11,7 +11,7 @@ export default function Banner(props) {
             <nav aria-label="Breadcrumb">
                 <ol className="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
                 <li className="breadcrumb-item">
-                    <a href="index.html">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                     {props.name}
@@ -19,10 +19,8 @@ export default function Banner(props) {
                 </ol>
             </nav>
             <h1 className="font-weight-normal">{props.name}</h1>
-            </div>{" "}
-            {/* .container */}
-        </div>{" "}
-        {/* .banner-section */}
+            </div>
+        </div>
         </div>
     );
 }
