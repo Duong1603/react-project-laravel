@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Session.css";
 export default function ContentSession() {
   return (
@@ -43,7 +44,7 @@ export default function ContentSession() {
                 <div className="header">
                   <img src="../assets/img/doctors/doctor_1.jpg" alt="" className="image-session" />
                   <div className="meta" id="Book">
-                    <a>Book</a>                  
+                  <Link to={'/booking'}>Book</Link>                  
                   </div>
                 </div>
               </div>
@@ -57,7 +58,7 @@ export default function ContentSession() {
                 <div className="header">
                   <img src="../assets/img/doctors/doctor_2.jpg" alt="" className="image-session" />
                   <div className="meta" id="Book">
-                    <a>Book</a>                  
+                    <Link to={'/booking'}>Book</Link>                  
                   </div>
                 </div>
               </div>
@@ -71,7 +72,7 @@ export default function ContentSession() {
                 <div className="header">
                   <img src="../assets/img/doctors/doctor_3.jpg" alt="" className="image-session" />
                   <div className="meta" id="Book">
-                    <a>Book</a>                  
+                  <Link to={'/booking'}>Book</Link>                   
                   </div>
                 </div>
               </div>
