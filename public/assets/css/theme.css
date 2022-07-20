@@ -945,7 +945,7 @@ a.text-dark:focus {
 .topbar .site-info a {
   display: inline-flex;
   align-items: center;
-  color: #A1AAA7;
+  color: #09474B;
 }
 
 .topbar .site-info a:hover {
@@ -1029,7 +1029,7 @@ a.text-dark:focus {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(110, 128, 122, 0.8);
+  color: #09474B
 }
 
 .navbar-light .navbar-nav .nav-link:hover,

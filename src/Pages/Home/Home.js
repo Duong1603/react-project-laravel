@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
-import Move_to_top from '../../Components/Move_to_top'
+import Move_to_top from '../../Components/MoveToTop'
 import Content from './Content'
 
 export default function Home() {

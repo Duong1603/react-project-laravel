@@ -4,7 +4,6 @@ export default class About extends Component {
     render() {
         return (
             <div>
-
                 <div className="page-section pb-0" id='about'>
                     <div className="container">
                         <div className="row align-items-center">
@@ -13,7 +12,7 @@ export default class About extends Component {
                                     WHAT CAN RTT DO FOR YOU? <br />
                                 </h1>
                                 <p className="text-grey mb-4" id='rtt'>
-                                    Rapid Transformational Therapy <br/>
+                                    Rapid Transformational Therapy <br />
                                     RTT is a hybrid therapy developed by Marisa Peer from London, England. It combines the best of hypnotherapy with unique methods for permanent and lasting changes, which result from as little as one session.<br />
                                     RTT helps you break ties with bad habits and enables people to achieve extraordinary outcomes in sports, business and performance arts.<br />
                                     It also improves focus, motivations and helps overcome fears and phobias.

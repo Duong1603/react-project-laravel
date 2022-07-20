@@ -16,7 +16,6 @@ export default class Slogan extends Component {
                     <div className='slogan-btn'>
                     <button type="button" className="slogan">CHANGE YOUR <br/>THOUGHT NOW</button>
                     </div>
-                 
                 </div>
             </div>
         )

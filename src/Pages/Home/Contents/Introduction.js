@@ -47,27 +47,22 @@ export default class Introduction extends Component {
                                 <div className="row align-items-center">
                                     <div className="col-lg-2 wow fadeInRight" data-wow-delay="400ms">
                                         <div className="img-place custom-img-1">
-                                            <img className="small-img"src="../assets/img/img_small.jpeg" alt="" />
+                                            <img className="small-img" src="../assets/img/img_small.jpeg" alt="" />
                                         </div>
-                                        <br/>
-                                        
+                                        <br />
                                     </div>
-                                    
                                     <div className="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
                                         <div className="img-place custom-img-1">
                                             <img src="../assets/img/phiphi.jpg" alt="" />
                                         </div>
-                                        
                                     </div>
                                     <div className="col-lg-4 py-3 wow fadeInUp">
                                         <h1 className='text-about'>
                                             ABOUT PHI PHI <br />
                                         </h1>
-            
                                         <p className="text-grey mb-4" id='custom-phi'>
-                                            Rapid Transformational Therapy <br/>
+                                            Rapid Transformational Therapy <br />
                                             Phi Phi is a passionate RTT practitioner who loves to accompany you on your healing journey. From as little as one session, Phi Phi is able to help you break free from your undesired habits and problems, such as smoking, gambling, anxiety etc. Through this process, Phi Phi will be your trusted therapist to help you unfold into the version that you’ve always wanted to be.
-
                                         </p>
                                         <a href="about.html" className="btn btn-primary">
                                             Read More
@@ -78,9 +73,6 @@ export default class Introduction extends Component {
                             </div>
                         </div>
                     </div>
-
-                    <br></br>
-
                 </div>
             </div>
         )

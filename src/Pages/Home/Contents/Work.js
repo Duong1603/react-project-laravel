@@ -65,44 +65,6 @@ export default class Work extends Component {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="item">
-                                <div className="card-doctor">
-                                    <div className="header">
-                                        <img src="../assets/img/doctors/doctor_3.jpg" alt="" />
-                                        <div className="meta">
-                                            <a href="#">
-                                                <span className="mai-call" />
-                                            </a>
-                                            <a href="#">
-                                                <span className="mai-logo-whatsapp" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="body">
-                                        <p className="text-xl mb-0">Dr. Rebecca Steffany</p>
-                                        <span className="text-sm text-grey">General Health</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="item">
-                                <div className="card-doctor">
-                                    <div className="header">
-                                        <img src="../assets/img/doctors/doctor_3.jpg" alt="" />
-                                        <div className="meta">
-                                            <a href="#">
-                                                <span className="mai-call" />
-                                            </a>
-                                            <a href="#">
-                                                <span className="mai-logo-whatsapp" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="body">
-                                        <p className="text-xl mb-0">Dr. Rebecca Steffany</p>
-                                        <span className="text-sm text-grey">General Health</span>
-                                    </div>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                 </div>

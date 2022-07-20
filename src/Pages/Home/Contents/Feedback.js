@@ -20,7 +20,7 @@ export default class Contact extends Component {
                         </div>
                         <div class="First-profile">
                             <div class="Image-profile">
-                                <img src="../assets/img/person/client.jpg" alt=""/>
+                                <img src="../assets/img/person/client.jpg" alt="" />
                             </div>
                             <div class="Content-profile">
                                 <h4 className="name-client">SARAH JORDAN</h4>
@@ -29,7 +29,7 @@ export default class Contact extends Component {
                         </div>
                         <div class="First-profile">
                             <div class="Image-profile">
-                                <img src="../assets/img/person/client.jpg" alt=""/>
+                                <img src="../assets/img/person/client.jpg" alt="" />
                             </div>
                             <div class="Content-profile">
                                 <h2 className="name-client">JANICE MONTGOMERY</h2>

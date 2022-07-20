@@ -17,9 +17,6 @@ export default function Content() {
             <NewPost></NewPost>
             <Contact></Contact>
             <Slogan></Slogan>
-
-         
-
         </>
     );
 }
