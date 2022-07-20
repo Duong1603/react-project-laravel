@@ -13,9 +13,9 @@ export default function indexAbout() {
         <Banner name={"AboutUs"} />
         <div className="page-section">
             <div className="container">
-                <top_about/>
-                <welcome_to/>
-                <our_doctor/>
+                <Top_about/>
+                <Welcome_to/>
+                <Our_doctor/>
             </div>
         </div>
         <Footer />
