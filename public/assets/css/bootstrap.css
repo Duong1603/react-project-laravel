@@ -196,6 +196,10 @@ img {
   vertical-align: middle;
   border-style: none;
 }
+.small-img{
+  width: 170px;
+  margin-top: 305px;
+}
 
 svg {
   overflow: hidden;
@@ -360,8 +364,19 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2;
 }
 
-h1, .h1 {
-  font-size: 2.5rem;
+h1 {
+  text-align: center;
+  font-size: 3rem;
+ 
+}
+.text-about{
+  color:white;
+}
+#about-rtt{
+  color: white;
+}
+.font-weight-normal{
+  padding: 150px 300px 150px 300px;
 }
 
 h2, .h2 {
@@ -545,6 +560,22 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+.slogan{
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  border: 1px solid white;
+  color: white;
+  padding: 3px 60px 3px 60px;
+}
+.slogan-btn{
+  text-align: center;
+  margin-bottom: 100px;
+}
+.page-section #text-slogan{
+  text-align: center;
+  font-size: 4rem;
 }
 
 @media (min-width: 576px) {
@@ -4644,7 +4675,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: #09474B;
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
