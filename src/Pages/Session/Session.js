@@ -12,8 +12,7 @@ export default function Session() {
       <Move_to_top/>
       <Header/>
       <Banner name ="Session"/>
-      <ContentSession/>
-    
+      <ContentSession/>   
       <Footer/>
     </>
   );

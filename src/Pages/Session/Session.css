@@ -6,16 +6,18 @@
 }
 
 .container-session {
-    color: white;
+    color:#09474B;
     /* color-background:#487E81; */
-    background-color: #487E81;
+    background-color: #A4C2C4;
 }
 
 #title-name {
     padding: 10% 15%;
-    color: white;
+   
 }
-
+#tile-item-name{
+    color:white;
+}
 .card-doctor .header {
     border-top-right-radius: 65px;
     /* color:white; */
@@ -29,7 +31,7 @@
 }
 
 #color-item-text {
-    color: #c7dad3 !important;
+    color:#09474B !important;
 }
 
 #Book {
@@ -57,7 +59,7 @@
     border-radius: 10px;
 }
 .read-or-hide{
-    color: rgb(35, 31, 31);
+    color: black;
     cursor: pointer;
   }
 
@@ -90,19 +92,4 @@
       transition: all 0.3s ease;
   }
   /* --------- */
-  .text{
 
-    position: relative;
-    animation-name: example;
-    animation-duration: 4s;
-  }
-  
-  @keyframes example {
-    0%  {bottom:10px; top:200px;}
-    
-    25%  {bottom:10px; top:200px;}
-    75%  {top:0px; bottom:200px;}
-    100%  {top:0px; bottom:200px;}
-    
-    
-  }
