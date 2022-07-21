@@ -73,12 +73,12 @@ export default function Header() {
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="about.html">
+                        <a className="nav-link" href="/about">
                         About Us
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="doctors.html">
+                        <a className="nav-link" href="/session">
                         Session
                         </a>
                     </li>
@@ -88,7 +88,7 @@ export default function Header() {
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="contact.html">
+                        <a className="nav-link" href="/contact">
                         Contact
                         </a>
                     </li>
