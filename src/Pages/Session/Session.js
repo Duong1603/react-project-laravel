@@ -5,13 +5,14 @@ import Header from "../../Components/Header/Header";
 import Move_to_top from "../../Components/MoveToTop";
 import ContentSession from "./ContentSession";
 
+
 export default function Session() {
   return (
     <>
       <Move_to_top/>
       <Header/>
       <Banner name ="Session"/>
-      <ContentSession/>
+      <ContentSession/>   
       <Footer/>
     </>
   );
