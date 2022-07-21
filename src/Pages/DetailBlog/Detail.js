@@ -2,11 +2,11 @@ import React from 'react'
 import Form from '../../Components/Form/Form';
 export default function Detail() {
    const lb = {
-     form_name: "Get in touch",
+     form_name: "Leave a comment",
      name1: "Name",
      name2: "Email",
-     name3: "Subject",
-     name4: "Detail more your problem",
+     name3: "Website",
+     name4: "Message",
    };
   return (
     <div className="col-lg-8">

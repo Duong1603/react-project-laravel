@@ -8,11 +8,15 @@ import Cardleft from './Cardleft'
 export default function IndexBlog() {
   return (
     <>
+    <div class="topbar">
+      <div class="container">
       <Header></Header>
       <Banner name={"Blog"}></Banner>
       <div className="row">
         <Card></Card>
         <Cardleft></Cardleft>
+      </div>
+      </div>
       </div>
       <Footer></Footer>
     </>
