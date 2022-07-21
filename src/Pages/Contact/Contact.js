@@ -5,6 +5,7 @@ import Footer from "../../Components/Footer/Footer";
 import FormHandle from "../../Components/Form/FormHandle";
 import Header from "../../Components/Header/Header";
 import Swal from "sweetalert2";
+import MoveToTop from "../../Components/MoveToTop/MoveToTop";
 import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
@@ -61,6 +62,7 @@ export default function Contact() {
 
     return (
         <>
+            <MoveToTop/>
             <Header />
             <Banner name={"Contact"} />
             <div className="page-section">

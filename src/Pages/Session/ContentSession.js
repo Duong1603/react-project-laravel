@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Session.css";
+import MoveToTop from "../../Components/MoveToTop"
 export default function ContentSession() {
   return (
     <div className="container-session">
+      <MoveToTop/>
       <div className="page-section">
         <div className="container">
           <div className="page-session-information">
@@ -37,50 +40,81 @@ export default function ContentSession() {
             or bespoke group offerings designed to help you discover the new
             version of you that you’ve always wanted to be.
           </p>
-          <div className="owl-carousel wow fadeInUp" id="doctorSlideshow">
-            <div className="item">
-              <div className="card-doctor" id="border-card">
-                <div className="header">
-                  <img src="../assets/img/doctors/doctor_1.jpg" alt="" className="image-session" />
-                  <div className="meta" id="Book">
-                    <a>Book</a>                  
+          <p className="text mb-5 wow fadeInUp">
+            We are a collective of health and wellness professionals based in
+            Ubud, Bali, Indonesia bringing you a variety of 1-1 private session
+            or bespoke group offerings designed to help you discover the new
+            version of you that you’ve always wanted to be.
+          </p>
+          <p className="text mb-5 wow fadeInUp">
+            We are a collective of health and wellness professionals based in
+            Ubud, Bali, Indonesia bringing you a variety of 1-1 private session
+            or bespoke group offerings designed to help you discover the new
+            version of you that you’ve always wanted to be.
+          </p>
+          <div className="col-lg-12 mt-5">
+              <h1 className="text-center mb-5 wow fadeInUp">Session</h1>
+              <div className="row justify-content-center">
+                <div className="col-md-6 col-lg-4 wow zoomIn">
+                  <div className="card-doctor">
+                    <div className="header">
+                      <img src="../assets/img/doctors/doctor_1.jpg" alt="" />
+                      <div className="meta">
+                        <a href="#">
+                          <span className="mai-call" />
+                        </a>
+                        <a href="#">
+                          <span className="mai-logo-whatsapp" />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="body">
+                      <p className="text-xl mb-0">Dr. Stein Albert</p>
+                      <span className="text-sm text-grey">Cardiology</span>
+                      <p>lorem* asdf jf ads jfh ads dsf jf sadkjfsadjfh kjds</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-4 wow zoomIn">
+                  <div className="card-doctor">
+                    <div className="header">
+                      <img src="../assets/img/doctors/doctor_2.jpg" alt="" />
+                      <div className="meta row justify-content-center">
+                        <a style={{width:'100px'}} href="#">
+                          <span >contact</span>
+                        </a>
+                        {/* <a href="#">
+                          <span className="mai-logo-whatsapp" />
+                        </a> */}
+                      </div>
+                    </div>
+                    <div className="body">
+                      <p className="text-xl mb-0">Dr. Alexa Melvin</p>
+                      <span className="text-sm text-grey">Dental</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-4 wow zoomIn">
+                  <div className="card-doctor">
+                    <div className="header">
+                      <img src="../assets/img/doctors/doctor_3.jpg" alt="" />
+                      <div className="meta">
+                        <a href="#">
+                          <span className="mai-call" />
+                        </a>
+                        <a href="#">
+                          <span className="mai-logo-whatsapp" />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="body">
+                      <p className="text-xl mb-0">Dr. Rebecca Steffany</p>
+                      <span className="text-sm text-grey">General Health</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="body" id="title-name">
-                <strong><h5 className="text-center xl-4">FREE DISCOVERY CALL</h5></strong>
-                <p className="text-center mb text-grey" id="color-item-text">Get in touch with Phi Phi for 30 minutes</p>
-              </div>
             </div>
-            <div className="item">
-              <div className="card-doctor" id="border-card">
-                <div className="header">
-                  <img src="../assets/img/doctors/doctor_2.jpg" alt="" className="image-session" />
-                  <div className="meta" id="Book">
-                    <a>Book</a>                  
-                  </div>
-                </div>
-              </div>
-              <div className="body" id="title-name">
-                <strong><h5 className="text-center xl-4">ONE SESSION</h5></strong>
-                <p className="text-center mb text-grey" id="color-item-text">Phi Phi brings to you 1:1 private session either online via zoom or offline at her facility.</p>
-              </div>
-            </div>
-            <div className="item">
-              <div className="card-doctor" id="border-card">
-                <div className="header">
-                  <img src="../assets/img/doctors/doctor_3.jpg" alt="" className="image-session" />
-                  <div className="meta" id="Book">
-                    <a>Book</a>                  
-                  </div>
-                </div>
-              </div>
-              <div className="body" id="title-name">
-                <strong><h5 className="text-center xl-4">PACKAGE OF THREE</h5></strong>
-                <p className="text-center mb text-grey" id="color-item-text"> Book 3 sessions at one for the best price possible.  (9 000 000 VND)</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

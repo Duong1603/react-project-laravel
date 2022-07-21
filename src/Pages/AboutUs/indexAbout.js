@@ -5,12 +5,13 @@ import Top_about from "./Top_about";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import Banner from "../../Components/Banner/Banner";
-
+import MoveToTop from "../../Components/MoveToTop/MoveToTop";
 export default function indexAbout() {
   return (
     <>
+        <MoveToTop/>
         <Header />
-        <Banner name={"AboutUs"} />
+        <Banner name={"About Us"} />
         <div className="page-section">
             <div className="container">
                 <Top_about/>
