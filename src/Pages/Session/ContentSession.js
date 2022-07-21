@@ -100,18 +100,15 @@ export default function ContentSession() {
                   <div className="header">
                     <img src="../assets/img/doctors/doctor_1.jpg" alt="" />
                     <div className="meta">
-                      <a href="#">
-                        <span className="mai-call" />
-                      </a>
-                      <a href="#">
-                        <span className="mai-logo-whatsapp" />
-                      </a>
+                    <Link style={{ width: "100px" }} to={"/booking/1"}>
+                        <span>contact</span>
+                      </Link>
                     </div>
                   </div>
                   <div className="body">
                     <p className="text-xl mb-0">Dr. Stein Albert</p>
                     <span className="text-sm text-grey">Cardiology</span>
-                    <p>lorem* asdf jf ads jfh ads dsf jf sadkjfsadjfh kjds</p>
+                    <p>lorem* asdf jf ads jfh fdsflksdf sdf dklsfsdf sdfsd fsdf sdf sdf sdf sdf sdf sdf sdkf sdkfklsdkf  ads dsf jf sadkjfsadjfh kjds</p>
                   </div>
                 </div>
               </div>
@@ -120,12 +117,9 @@ export default function ContentSession() {
                   <div className="header">
                     <img src="../assets/img/doctors/doctor_2.jpg" alt="" />
                     <div className="meta row justify-content-center">
-                      <a style={{ width: "100px" }} href="#">
+                      <Link style={{ width: "100px" }} to={"/booking/2"}>
                         <span>contact</span>
-                      </a>
-                      {/* <a href="#">
-                          <span className="mai-logo-whatsapp" />
-                        </a> */}
+                      </Link>
                     </div>
                   </div>
                   <div className="body">
@@ -139,12 +133,9 @@ export default function ContentSession() {
                   <div className="header">
                     <img src="../assets/img/doctors/doctor_3.jpg" alt="" />
                     <div className="meta">
-                      <a href="#">
-                        <span className="mai-call" />
-                      </a>
-                      <a href="#">
-                        <span className="mai-logo-whatsapp" />
-                      </a>
+                    <Link style={{ width: "100px" }} to={"/booking/3"}>
+                        <span>contact</span>
+                      </Link>
                     </div>
                   </div>
                   <div className="body">
