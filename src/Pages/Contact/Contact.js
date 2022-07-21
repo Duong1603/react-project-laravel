@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { postContact } from "../../apiServices/contactService";
+import { postContact } from "../../Services/API/contactService";
 import Banner from "../../Components/Banner/Banner";
 import Footer from "../../Components/Footer/Footer";
 import FormHandle from "../../Components/Form/FormHandle";

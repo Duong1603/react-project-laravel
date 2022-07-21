@@ -29,7 +29,7 @@ const publicRoutes = [
     component: Session,
   },
   {
-    path: "/blog",
+    path: "/blogs",
     component: IndexBlog,
   },
   {

@@ -1,6 +1,10 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { navLink } from "../../Services/NavLink";
 export default function Header() {
+    
+    const location = useLocation();
+    
     return (
         <header>
             <div className="topbar">
@@ -35,9 +39,9 @@ export default function Header() {
         {/* .topbar */}
             <nav className="navbar navbar-expand-lg navbar-light shadow-sm">
                 <div className="container">
-                <a className="navbar-brand" href="#">
+                <Link className="navbar-brand" to={"/"}>
                     <span className="text-primary">One</span>-Health
-                </a>
+                </Link>
                 <form action="#">
                     <div className="input-group input-navbar">
                     <div className="input-group-prepend">
@@ -67,36 +71,14 @@ export default function Header() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupport">
                     <ul className="navbar-nav ml-auto">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="index.html">
-                        Home
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/about">
-                        About Us
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/session">
-                        Session
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="blog.html">
-                        News
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/contact">
-                        Contact
-                        </a>
-                    </li>
-                    {/* <li className="nav-item">
-                        <a className="btn btn-primary ml-lg-3" href="#">
-                        Login / Register
-                        </a>
-                    </li> */}
+
+                        {navLink.map((item,i)=>(
+                             <li key={i}  className={item.to == location.pathname ? "nav-item active": "nav-item " }>
+                             <Link  className="nav-link" to={item.to}>
+                             {item.name}
+                             </Link>
+                         </li>
+                        ))}
                     </ul>
                 </div>{" "}
                 {/* .navbar-collapse */}

@@ -1,5 +1,6 @@
 import React from "react";
-
+import { navLink } from "../../Services/NavLink";
+import { Link } from "react-router-dom";
 export default function Footer() {
     return (
         <footer className="page-footer ">
@@ -8,18 +9,12 @@ export default function Footer() {
                     <div className="col-sm-6 col-lg-3 py-3">
                         <h5>Company</h5>
                         <ul className="footer-menu">
-                        <li>
-                            <a href="#">About Us</a>
-                        </li>
-                        <li>
-                            <a href="#">Career</a>
-                        </li>
-                        <li>
-                            <a href="#">Editorial Team</a>
-                        </li>
-                        <li>
-                            <a href="#">Protection</a>
-                        </li>
+                            {navLink.map((item,i)=>
+                            <li key={i}>
+                                <Link to={item.to}>
+                                    {item.name}
+                                </Link>
+                            </li>)}
                         </ul>
                     </div>
                     <div className="col-sm-6 col-lg-3 py-3">
