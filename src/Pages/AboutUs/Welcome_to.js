@@ -6,7 +6,7 @@ export default function Welcome_to() {
       <div className="page-section">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-8 wow fadeInUp">
+            <div className="col-lg-12 wow fadeInUp">
               <h1 className="text-center mb-3">
                 Welcome to Your Health Center
               </h1>
@@ -32,7 +32,7 @@ export default function Welcome_to() {
                 </p>
               </div>
             </div>
-            <div className="col-lg-10 mt-5">
+            <div className="col-lg-12 mt-5">
               <h1 className="text-center mb-5 wow fadeInUp">Our Doctors</h1>
               <div className="row justify-content-center">
                 <div className="col-md-6 col-lg-4 wow zoomIn">

@@ -1,26 +1,81 @@
-import React from "react";
+import React, { useState } from "react";
+import { postContact } from "../../Services/API/contactService";
 import Banner from "../../Components/Banner/Banner";
 import Footer from "../../Components/Footer/Footer";
-import Form from "../../Components/Form/Form";
+import FormHandle from "../../Components/Form/FormHandle";
 import Header from "../../Components/Header/Header";
+import Swal from "sweetalert2";
+import MoveToTop from "../../Components/MoveToTop/MoveToTop";
+import { useNavigate } from "react-router-dom";
+
 export default function Contact() {
+    const [form, setForm] = useState({
+        name: "",
+        phone: "",
+        email: "",
+        description: "",
+    });
+
+    const navigate = useNavigate();
+
+    const handleInput = (e) => {
+        const { name, value } = e.target;
+        setForm((pre) => ({ ...pre, [name]: value }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        postContact(form)
+        .then((res) => {
+            const err = res.data.errors;
+            err !== undefined
+            ? Swal.fire({
+                title: "Error!",
+                html: 
+                
+                    `<p>${err.name === undefined ? " ": err.name }</p>
+                    <p>${err.description === undefined ? " ": err.description}</p>
+                    <p>${err.phone === undefined ? " ": err.phone}</p>
+                    <p>${err.email === undefined ? " ": err.email}</p>`,
+                icon: "error",
+                confirmButtonText: "Got it",
+                })
+            : Swal.fire("Good job!", res.data.message, "success")
+                .then(
+                (result) => {
+                    // move to home page
+                    navigate("/");
+                }
+                );
+        })
+        .catch((err) => console.log(err));
+    };
+
     const lb = {
         form_name: "Get in touch",
-        name1: "Name",
+        name1: "Phone",
         name2: "Email",
-        name3: "Subject",
+        name3: "Full name",
         name4: "Detail more your problem",
     };
+
     return (
         <>
-        <Header />
-        <Banner name={"Contact"} />
-        <div className="page-section">
-            <div className="container">
-            <Form lb={lb} />
+            <MoveToTop/>
+            <Header />
+            <Banner name={"Contact"} />
+            <div className="page-section">
+                <div className="container">
+                <FormHandle
+                    form={form}
+                    setForm={handleInput}
+                    lb={lb}
+                    action={handleSubmit}
+                />
+                </div>
             </div>
-        </div>
-        <Footer />
+            <Footer />
         </>
     );
 }

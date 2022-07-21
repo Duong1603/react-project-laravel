@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Form({ lb }) {
+export default function FormHandle({ lb,form,setForm,action }) {
     return (
         <>
         <div>
             <h1 className="text-center wow fadeInUp">{lb.form_name}</h1>
-            <form className="contact-form mt-5">
+            <form onSubmit={action} className="contact-form mt-5">
             <div className="row mb-3">
                 <div className="col-sm-6 py-2 wow fadeInLeft">
                 <label htmlFor="fullName">{lb.name1}</label>
@@ -14,6 +14,9 @@ export default function Form({ lb }) {
                     id="fullName"
                     className="form-control"
                     placeholder={lb.name1+"..."}
+                    value={form.phone}
+                    name='phone'
+                    onChange={setForm}
                 />
                 </div>
                 <div className="col-sm-6 py-2 wow fadeInRight">
@@ -23,6 +26,9 @@ export default function Form({ lb }) {
                     id="emailAddress"
                     className="form-control"
                     placeholder={lb.name2+"..."}
+                    value={form.email}
+                    name='email'
+                    onChange={setForm}
                 />
                 </div>
                 <div className="col-12 py-2 wow fadeInUp">
@@ -32,6 +38,9 @@ export default function Form({ lb }) {
                     id="subject"
                     className="form-control"
                     placeholder={lb.name3+"..."}
+                    value={form.name}
+                    name='name'
+                    onChange={setForm}
                 />
                 </div>
                 <div className="col-12 py-2 wow fadeInUp">
@@ -41,8 +50,9 @@ export default function Form({ lb }) {
                     className="form-control"
                     rows={8}
                     placeholder={lb.name4+"..."}
-                    defaultValue={""}
-                    
+                    value={form.problem}
+                    name='description'
+                    onChange={setForm}
                 />
                 </div>
             </div>

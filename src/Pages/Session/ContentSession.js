@@ -1,7 +1,8 @@
 // import React from "react";
 import React, { useState } from "react";
 import "./Session.css";
-
+import { Link } from "react-router-dom";
+import MoveToTop from "../../Components/MoveToTop/MoveToTop";
 const ReadMore = ({ children }) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
@@ -22,6 +23,7 @@ const ReadMore = ({ children }) => {
 export default function ContentSession() {
   return (
     <div className="container-session">
+      <MoveToTop />
       <div className="page-section">
         <div className="container">
           <div className="page-session-information">
@@ -81,92 +83,68 @@ export default function ContentSession() {
               what was weighing you down{" "}
             </p>
           </div>
-          <h1 className="text-center wow fadeInUp" id="tile-item-name" >Our Sessions</h1>
+          <h1 className="text-center wow fadeInUp" id="tile-item-name">
+            Our Sessions
+          </h1>
           <p className="text mb-5 wow fadeInUp">
             We are a collective of health and wellness professionals based in
             Ubud, Bali, Indonesia bringing you a variety of 1-1 private session
             or bespoke group offerings designed to help you discover the new
             version of you that you’ve always wanted to be.
           </p>
-          <div className="owl-carousel wow fadeInUp" id="doctorSlideshow">
-            <div className="item">
-              <div className="card-doctor" id="border-card">
-                <div className="header">
-                  <img
-                    src="../assets/img/doctors/doctor_1.jpg"
-                    alt=""
-                    className="image-session"
-                  />
-                  <div className="meta" id="Book">
-                    <a href=" #">Book</a>
+          <div className="col-lg-12 mt-5">
+            <h1 className="text-center mb-5 wow fadeInUp">Session</h1>
+            <div className="row justify-content-center">
+              <div className="col-md-6 col-lg-4 wow zoomIn">
+                <div className="card-doctor">
+                  <div className="header">
+                    <img src="../assets/img/doctors/doctor_1.jpg" alt="" />
+                    <div className="meta">
+                    <Link style={{ width: "100px" }} to={"/booking/1"}>
+                        <span>contact</span>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="body">
+                    <p className="text-xl mb-0">Dr. Stein Albert</p>
+                    <span className="text-sm text-grey">Cardiology</span>
+                    <p>lorem* asdf jf ads jfh fdsflksdf sdf dklsfsdf sdfsd fsdf sdf sdf sdf sdf sdf sdf sdkf sdkfklsdkf  ads dsf jf sadkjfsadjfh kjds</p>
                   </div>
                 </div>
               </div>
-              <div className="body" id="title-name">
-                <strong>
-                  <h5 className="text-center xl-4" id="tile-item-name">FREE DISCOVERY CALL</h5>
-                </strong>
-                <p className="text-center mb text-grey" id="color-item-text">
-                  Get in touch with Phi Phi for 30 minutes
-                </p>
-              </div>
-            </div>
-            <div className="item">
-              <div className="card-doctor" id="border-card">
-                <div className="header">
-                  <img
-                    src="../assets/img/doctors/doctor_2.jpg"
-                    alt=""
-                    className="image-session"
-                  />
-                  <div className="meta" id="Book">
-                    <a href=" #">Book</a>
+              <div className="col-md-6 col-lg-4 wow zoomIn">
+                <div className="card-doctor">
+                  <div className="header">
+                    <img src="../assets/img/doctors/doctor_2.jpg" alt="" />
+                    <div className="meta row justify-content-center">
+                      <Link style={{ width: "100px" }} to={"/booking/2"}>
+                        <span>contact</span>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="body">
+                    <p className="text-xl mb-0">Dr. Alexa Melvin</p>
+                    <span className="text-sm text-grey">Dental</span>
                   </div>
                 </div>
               </div>
-              <div className="body" id="title-name">
-                <strong>
-                  <h5 className="text-center xl-4" id="tile-item-name">ONE SESSION</h5>
-                </strong>
-                <p className="text-center mb text-grey" id="color-item-text">
-                  Phi Phi brings to you 1:1 private session either online via
-                  zoom or offline at her facility.
-                </p>
-              </div>
-            </div>
-            <div className="item">
-              <div className="card-doctor" id="border-card">
-                <div className="header">
-                  <img
-                    src="../assets/img/doctors/doctor_3.jpg"
-                    alt=""
-                    className="image-session"
-                  />
-                  <div className="meta" id="Book">
-                    <a href=" #">Book</a>
+              <div className="col-md-6 col-lg-4 wow zoomIn">
+                <div className="card-doctor">
+                  <div className="header">
+                    <img src="../assets/img/doctors/doctor_3.jpg" alt="" />
+                    <div className="meta">
+                    <Link style={{ width: "100px" }} to={"/booking/3"}>
+                        <span>contact</span>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="body">
+                    <p className="text-xl mb-0">Dr. Rebecca Steffany</p>
+                    <span className="text-sm text-grey">General Health</span>
                   </div>
                 </div>
               </div>
-              <div className="body" id="title-name">
-                <strong>
-                  <h5 className="text-center xl-4" id="tile-item-name" >PACKAGE OF THREE</h5>
-                </strong>
-                <p className="text-center mb text-grey" id="color-item-text">
-                  {" "}
-                  Book 3 sessions at one for the best price possible. (9 000 000
-                  VND)
-                </p>
-              </div>
             </div>
-          </div>
-          <div className="text wow fadeInUp">
-            <strong>
-              <h4>Comment</h4>
-            </strong>
-            <textarea id="txtArea" rows="3" cols="100"></textarea>
-            <form>
-              <input className="inputComment" value="Send" type="submit" />
-            </form>
           </div>
         </div>
       </div>

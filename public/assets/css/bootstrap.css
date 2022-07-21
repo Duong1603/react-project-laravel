@@ -378,6 +378,9 @@ h1 {
 .font-weight-normal{
   padding: 150px 300px 150px 300px;
 }
+.font-weight-normal-banner{
+  font-weight: 400 !important;
+}
 
 h2, .h2 {
   font-size: 2rem;
