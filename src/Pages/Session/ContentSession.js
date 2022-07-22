@@ -4,11 +4,13 @@ import "./Session.css";
 import { Link } from "react-router-dom";
 import MoveToTop from "../../Components/MoveToTop/MoveToTop";
 const ReadMore = ({ children }) => {
+
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
 
   const toggleReadMore = () => {
     setIsReadMore(!isReadMore);
+
   };
   return (
     <p className="text">
@@ -102,7 +104,7 @@ export default function ContentSession() {
                     <div className="meta">
                     <Link style={{ width: "100px" }} to={"/booking/1"}>
                         <span>contact</span>
-                      </Link>
+                    </Link>
                     </div>
                   </div>
                   <div className="body">
@@ -139,8 +141,11 @@ export default function ContentSession() {
                     </div>
                   </div>
                   <div className="body">
+                    <a href="">
                     <p className="text-xl mb-0">Dr. Rebecca Steffany</p>
                     <span className="text-sm text-grey">General Health</span>
+                    </a>
+                   
                   </div>
                 </div>
               </div>
