@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function TagBlog() {
   return (
-    <div className="sidebar-block">
+   <div className="sidebar-block">
       <h3 className="sidebar-title">Tag Cloud</h3>
       <div className="tagcloud">
         <a href="#" className="tag-cloud-link">
@@ -29,7 +29,7 @@ export default function TagBlog() {
         <a href="#" className="tag-cloud-link">
           drinks
         </a>
-      </div>
+      </div> 
     </div>
   );
 }

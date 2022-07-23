@@ -7,6 +7,7 @@ import Session from "../Pages/Session/Session";
 import IndexBlog from "../Pages/Blog/IndexBlog";
 import IndexDetail from "../Pages/DetailBlog/IndexDetail";
 import ReactBigCalendar from "../Pages/Booking/Booking";
+import CardCategory from "../Pages/Blog/CardCategory";
 const publicRoutes = [
   {
     path: "/",
@@ -41,6 +42,10 @@ const publicRoutes = [
   {
     path: "/booking/:id",
     component: ReactBigCalendar,
+  },
+  {
+    path: "/search/:id",
+    component: CardCategory,
   },
 ];
 

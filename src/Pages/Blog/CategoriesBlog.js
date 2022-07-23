@@ -1,23 +1,19 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 export default function CategoriesBlog() {
   return (
     <div className="sidebar-block">
       <h3 className="sidebar-title">Categories</h3>
       <ul className="categories">
         <li>
-          <a href="#">
-            Food <span>12</span>
-          </a>
+          <Link to="/blogs">All<span>120</span></Link>
+        </li>
+        <li>
+          <Link to={`/search/${4}`} >Food <span>12</span></Link>
         </li>
         <li>
           <a href="#">
-            Dish <span>22</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Desserts <span>37</span>
+            <Link to={`/search/${3}`}>Dish <span>12</span></Link>
           </a>
         </li>
         <li>
