@@ -1,8 +1,13 @@
 // import React from "react";
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import "./Session.css";
 import { Link } from "react-router-dom";
 import MoveToTop from "../../Components/MoveToTop/MoveToTop";
+// import { getPackage } from "../../Services/API/detailSessionService";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
+
 const ReadMore = ({ children }) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
@@ -20,7 +25,35 @@ const ReadMore = ({ children }) => {
   );
 };
 
+
+
 export default function ContentSession() {
+
+  const [packagess, setPackege] = useState([]);
+
+  const getPackage = () => {
+    // Make a request for a user with a given ID
+    axios.get('http://localhost:8000/api/packages')
+      .then(function (response) {
+        // handle success
+        console.log(response.data.data);
+        setPackege(response.data.data)
+        // setIsLoaded(true)
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+  }
+ 
+  useEffect(() => {
+    getPackage();
+  
+}, [])
+
   return (
     <div className="container-session">
       <MoveToTop />
@@ -95,55 +128,29 @@ export default function ContentSession() {
           <div className="col-lg-12 mt-5">
             <h1 className="text-center mb-5 wow fadeInUp">Session</h1>
             <div className="row justify-content-center">
-              <div className="col-md-6 col-lg-4 wow zoomIn">
-                <div className="card-doctor">
-                  <div className="header">
-                    <img src="../assets/img/doctors/doctor_1.jpg" alt="" />
-                    <div className="meta">
-                    <Link style={{ width: "100px" }} to={"/booking/1"}>
-                        <span>contact</span>
-                      </Link>
+              {packagess.length !== 0
+                ?
+                packagess.map((packageis, index) =>
+                  <div className="col-md-6 col-lg-4 wow zoomIn" key={index}>
+                    <div className="card-doctor">
+                      <div className="header">
+                        <img src={`http://localhost:8000/img/${packageis.image}`} alt="" />
+                        <div className="meta">
+                          <Link style={{ width: "100px" }} to={"/booking/1"}>
+                            <span>contact</span>
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="body">
+                        <p className="text-xl mb-0">{packageis.name}</p>
+                        <span className="text-sm text-grey">{packageis.price}</span>
+                        <p>{packageis.description}</p>
+                      </div>
                     </div>
                   </div>
-                  <div className="body">
-                    <p className="text-xl mb-0">Dr. Stein Albert</p>
-                    <span className="text-sm text-grey">Cardiology</span>
-                    <p>lorem* asdf jf ads jfh fdsflksdf sdf dklsfsdf sdfsd fsdf sdf sdf sdf sdf sdf sdf sdkf sdkfklsdkf  ads dsf jf sadkjfsadjfh kjds</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-4 wow zoomIn">
-                <div className="card-doctor">
-                  <div className="header">
-                    <img src="../assets/img/doctors/doctor_2.jpg" alt="" />
-                    <div className="meta row justify-content-center">
-                      <Link style={{ width: "100px" }} to={"/booking/2"}>
-                        <span>contact</span>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="body">
-                    <p className="text-xl mb-0">Dr. Alexa Melvin</p>
-                    <span className="text-sm text-grey">Dental</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-4 wow zoomIn">
-                <div className="card-doctor">
-                  <div className="header">
-                    <img src="../assets/img/doctors/doctor_3.jpg" alt="" />
-                    <div className="meta">
-                    <Link style={{ width: "100px" }} to={"/booking/3"}>
-                        <span>contact</span>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="body">
-                    <p className="text-xl mb-0">Dr. Rebecca Steffany</p>
-                    <span className="text-sm text-grey">General Health</span>
-                  </div>
-                </div>
-              </div>
+                ) :
+                <div> NO database.</div>
+              }
             </div>
           </div>
         </div>
