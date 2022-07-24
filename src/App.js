@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./Components/Footer/Footer";
+import Header from "./Components/Header/Header";
 import { publicRoutes } from "./routes";
 // code for firebase
 // --------------------------------------------------------------//
@@ -27,6 +29,7 @@ import { publicRoutes } from "./routes";
 function App() {
     return (
         <Router>
+            <Header/>
             <Routes>
             {
                 publicRoutes.map((route,index)=>{
@@ -35,6 +38,7 @@ function App() {
                 })
             }
             </Routes>
+            <Footer/>
         </Router>
     )
 }

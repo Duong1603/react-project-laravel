@@ -1,12 +1,9 @@
 // import React from "react";
-// import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Session.css";
 import { Link } from "react-router-dom";
 import MoveToTop from "../../Components/MoveToTop/MoveToTop";
-// import { getPackage } from "../../Services/API/detailSessionService";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-
 
 const ReadMore = ({ children }) => {
   const text = children;
@@ -25,23 +22,15 @@ const ReadMore = ({ children }) => {
 };
 
 export default function ContentSession() {
-  const [packagess, setPackege] = useState([]);
-  const getPackage = () => {
-    axios.get('http://localhost:8000/api/packages')
-      .then(function (response) {
-        console.log(response.data.data);
-        setPackege(response.data.data)
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
-      .then(function () {
-      });
-  }
+  const [packages, setPackages] = useState([]);
+  const fetchPackages = async () => {
+    await axios.get(`http://localhost:8000/api/package`).then(({ data }) => {
+      setPackages(data.data);
+    });
+  };
   useEffect(() => {
-    getPackage();
-  }, [])
-
+    fetchPackages();
+  }, []);
   return (
     <div className="container-session">
       <MoveToTop />
@@ -116,29 +105,27 @@ export default function ContentSession() {
           <div className="col-lg-12 mt-5">
             <h1 className="text-center mb-5 wow fadeInUp">Session</h1>
             <div className="row justify-content-center">
-              {packagess.length !== 0
-                ?
-                packagess.map((packageis, index) =>
-                  <div className="col-md-6 col-lg-4 wow zoomIn" key={index}>
-                    <div className="card-doctor">
-                      <div className="header">
-                        <img src={`http://localhost:8000/img/${packageis.image}`} alt="" />
-                        <div className="meta">
-                          <Link style={{ width: "100px" }} to={"/booking/1"}>
-                            <span>contact</span>
-                          </Link>
+              <Link to={"/session/1"} style={{ width: "1000px" }}>
+                <div className="col-md-6 col-lg-4 zoomIn">
+                  {packages.length > 0 &&
+                    packages.map((row, key) => (
+                      <div className="card-doctor">
+                        <div className="header">
+                          <img src={row.image} alt="..." />
+                          <div className="meta">
+                            <Link style={{ width: "100px" }} to={"/booking/1"}>
+                              <span>contact</span>
+                            </Link>
+                          </div>
+                        </div>
+                        <div className="body">
+                          <h4 className="text-xl mb-0">{row.name}</h4>
+                          <p>{row.description}</p>
                         </div>
                       </div>
-                      <div className="body">
-                        <p className="text-xl mb-0">{packageis.name}</p>
-                        <span className="text-sm text-grey">{packageis.price}</span>
-                        <p>{packageis.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                ) :
-                <div> NO database.</div>
-              }
+                    ))}
+                </div>
+              </Link>
             </div>
           </div>
         </div>
