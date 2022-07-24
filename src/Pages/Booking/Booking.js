@@ -3,16 +3,20 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import events from "./events";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
+import { Link } from "react-router-dom";
 
 moment.locale("en-VN");
 const localizer = momentLocalizer(moment);
 
 export default function ReactBigCalendar() {
 
+    const history = useNavigate();
     // booking for session 2 hours
 
     const [eventsData, setEventsData] = useState([]);
+
+    const [times,setTimes] = useState(3);
 
     const [pick, setPick] = useState([]);
 
@@ -49,12 +53,13 @@ export default function ReactBigCalendar() {
     }, []);
 
     const handleClick = () => {
-        alert(pick.map(item=>(item.start+item.end)))
+       
     };
 
     const handleSelect = ({ start, end }) => {
         console.log(start.getDay());
         console.log(end);
+      
         // pass working time
         if (
             (start.getHours() > 8 &&
@@ -70,13 +75,26 @@ export default function ReactBigCalendar() {
             if (start >= new Date()) {
                 // pass 30 minutes
                 if ( start.getHours() + 2 === end.getHours() && start.getMinutes() === end.getMinutes() ) {
-                setPick([
-                    {
-                    start,
-                    end,
-                    title: "test",
-                    },
-                ]);
+                    if(pick.length==3){
+                        setPick([...pick.splice(1),
+                            {
+                            start,
+                            end,
+                            title: "test",
+                            },
+                        ]);
+                        setTimes(times)
+                    }
+                    else{
+                        setPick([...pick,
+                            {
+                            start,
+                            end,
+                            title: "test",
+                            },
+                        ]);
+                        setTimes(pre=>pre-1)
+                    }
                 }
             }
             }
@@ -85,8 +103,9 @@ export default function ReactBigCalendar() {
     return (
         <div className="App">
             <h1>Time for GMT+7</h1>
-            
+            <h2>you have: {times === 0 ? times+ " But you can change ": times} </h2>
             <h2>{parseInt(id.id) > 0 ? parseInt(id.id):"id is not a number"}</h2>
+            <button onClick={()=>history(-1)}>back</button>
         <Calendar
             views={["day", "agenda", "month", "week"]}
             selectable
@@ -100,6 +119,7 @@ export default function ReactBigCalendar() {
             slotPropGetter={slotPropGetter}
         />
         <button onClick={handleClick}>confirm pick</button>
+        <Link to={'/check-out'}>confirm</Link>
         </div>  
     );
 }
