@@ -8,7 +8,6 @@ import axios from "axios";
 const ReadMore = ({ children }) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
-
   const toggleReadMore = () => {
     setIsReadMore(!isReadMore);
   };
@@ -23,15 +22,15 @@ const ReadMore = ({ children }) => {
 };
 
 export default function ContentSession() {
-    const [packages, setPackages] = useState([]);
-    const fetchPackages = async () => {
-        await axios.get(`http://localhost:8000/api/package`).then(({ data }) => {
-        setPackages(data.data);
-        });
-    };
-    useEffect(() => {
-        fetchPackages();
-    }, []);
+  const [packages, setPackages] = useState([]);
+  const fetchPackages = async () => {
+    await axios.get(`http://localhost:8000/api/package`).then(({ data }) => {
+      setPackages(data.data);
+    });
+  };
+  useEffect(() => {
+    fetchPackages();
+  }, []);
   return (
     <div className="container-session">
       <MoveToTop />
@@ -106,25 +105,27 @@ export default function ContentSession() {
           <div className="col-lg-12 mt-5">
             <h1 className="text-center mb-5 wow fadeInUp">Session</h1>
             <div className="row justify-content-center">
+              <Link to={"/session/1"} style={{ width: "1000px" }}>
                 <div className="col-md-6 col-lg-4 zoomIn">
-                {packages.length > 0 &&
-                packages.map((row, key) => (
-                    <div className="card-doctor">
+                  {packages.length > 0 &&
+                    packages.map((row, key) => (
+                      <div className="card-doctor">
                         <div className="header">
-                            <img src={row.image} alt="..."/>
-                            <div className="meta">
+                          <img src={row.image} alt="..." />
+                          <div className="meta">
                             <Link style={{ width: "100px" }} to={"/booking/1"}>
-                                <span>contact</span>
+                              <span>contact</span>
                             </Link>
-                            </div>
+                          </div>
                         </div>
                         <div className="body">
-                            <h4 className="text-xl mb-0">{row.name}</h4>
-                            <p>{row.description}</p>
+                          <h4 className="text-xl mb-0">{row.name}</h4>
+                          <p>{row.description}</p>
                         </div>
-                    </div>
+                      </div>
                     ))}
                 </div>
+              </Link>
             </div>
           </div>
         </div>
