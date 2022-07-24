@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Form({ lb }) {
+    
     return (
         <>
         <div>
@@ -53,12 +54,20 @@ export default function Form({ lb }) {
                         <p>name:<span>google meeting</span></p>
                         <p>email:<span>google meeting</span></p>
                         <p>phone:<span>google meeting</span></p>
-                        <p>session:<span>google meeting</span></p>
-                        <form>
-                            <input type={'radio'} value={'cast'} name="payment"/>tien mat
+                        <p>session:<span>{lb.state.pick.length === 0 ? "Nothing ": lb.state.pick.map(item=><p>
+                            <a href="# ">{item.title}</a>
                             <br/>
-                            <input type={'radio'} value={'momo'} name="payment"/>momo
-                        </form>
+                            start: {item.start.getHours()}: {item.start.getMinutes()}
+                            <br/>
+                            end: {item.end.getHours()}: {item.end.getMinutes()}
+
+                        </p>)}</span></p>
+                        {lb.state.session === 1 ?
+                        <form>
+                        <input type={'radio'} value={'cast'} name="payment"/>tien mat
+                        <br/>
+                        <input type={'radio'} value={'momo'} name="payment"/>momo
+                    </form>: ""}
                     </div>
             </div>
             <button type="submit" className="btn btn-primary wow zoomIn">

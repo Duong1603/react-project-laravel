@@ -62,21 +62,21 @@ export default function ReactBigCalendar() {
             start.getHours() < 17)
         ) {
         // pass 30 minutes
-        if (start >= new Date()) {
-            if (
-            start.getHours() === end.getHours() ||
-            (start.getHours() === end.getHours() - 1 &&
-                start.getMinutes() > end.getMinutes())
-            ) {
-            setPick([
-                {
-                start,
-                end,
-                title: "test",
-                },
-            ]);
+            if (start >= new Date()) {
+                if (
+                start.getHours() === end.getHours() ||
+                (start.getHours() === end.getHours() - 1 &&
+                    start.getMinutes() > end.getMinutes())
+                ) {
+                setPick([
+                    {
+                    start,
+                    end,
+                    title: "test",
+                    },
+                ]);
+                }
             }
-        }
         }
     };
     return (
