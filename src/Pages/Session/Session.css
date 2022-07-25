@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Roboto:wght@100&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Roboto:wght@100&display=swap');
 
 .image-session {
     border-top-left-radius: 0px;
@@ -7,7 +7,6 @@
 
 .container-session {
     color:#09474B;
-    /* color-background:#487E81; */
     background-color: #A4C2C4;
 }
 
@@ -20,16 +19,16 @@
 }
 .card-doctor .header {
     border-top-right-radius: 65px;
-    /* color:white; */
-}
 
+} */
+/* 
 #border-card {
     border-top-left-radius: 0px;
     border-top-right-radius: 65px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
-}
-
+} */
+/* 
 #color-item-text {
     color:#09474B !important;
 }
@@ -63,7 +62,6 @@
     cursor: pointer;
   }
 
-  /*--------  */
   .inputComment[type=submit]{
     padding: 0.2em 0.5em 0.2em 0.5em;
     font-size: 15px;
@@ -90,6 +88,6 @@
       -webkit-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       transition: all 0.3s ease;
-  }
+  } */
   /* --------- */
 

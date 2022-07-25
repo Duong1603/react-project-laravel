@@ -26,20 +26,28 @@ const ReadMore = ({ children }) => {
 
 export default function ContentSession() {
   const [packagess, setPackege] = useState([]);
+
   const getPackage = () => {
+    // Make a request for a user with a given ID
     axios.get('http://localhost:8000/api/packages')
       .then(function (response) {
+        // handle success
         console.log(response.data.data);
         setPackege(response.data.data)
+        // setIsLoaded(true)
       })
       .catch(function (error) {
+        // handle error
         console.log(error);
       })
       .then(function () {
+        // always executed
       });
   }
+
   useEffect(() => {
     getPackage();
+
   }, [])
 
   return (
