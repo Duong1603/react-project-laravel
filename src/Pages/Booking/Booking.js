@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import { useParams } from "react-router";
-import { Link,useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import events from "./events";
 import "react-big-calendar/lib/css/react-big-calendar.css";
@@ -23,7 +23,7 @@ export default function ReactBigCalendar() {
 
     const [times, setTimes] = useState(
         ()=>{
-            if(id.id === 3) return 3
+            if(parseInt(id.id) === 3) return 3
             else return 1
         }
     );
@@ -90,7 +90,7 @@ export default function ReactBigCalendar() {
        return false
     }
     const availableAfternoon = (start,end)=>{
-        if((start.getHours() > 13  || (start.getHours() === 13 && start.getMinutes() >= 30))  && (end.getHours() <= 15 || end.getHours() === 16 && end.getMinutes()===30)) return true
+        if((start.getHours() > 13  || (start.getHours() === 13 && start.getMinutes() >= 30))  && (end.getHours() <= 16 || end.getHours() === 16 && end.getMinutes()===30)) return true
         return false
     }
     const pickSession1 = (start, end) => {
