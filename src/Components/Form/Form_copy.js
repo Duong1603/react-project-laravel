@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Form({ lb }) {
-    
+
     return (
         <>
         <div>
@@ -62,12 +62,13 @@ export default function Form({ lb }) {
                             end: {item.end.getHours()}: {item.end.getMinutes()}
 
                         </p>)}</span></p>
-                        {lb.state.session === 1 ?
-                        <form>
-                        <input type={'radio'} value={'cast'} name="payment"/>tien mat
-                        <br/>
-                        <input type={'radio'} value={'momo'} name="payment"/>momo
-                    </form>: ""}
+                        {lb.state.session == 1 ?
+                         "":
+                         <form>
+                         <input type="radio" value="cast" name="payment" />tien mat
+                         <br />
+                         <input type="radio" value="momo" name="payment" />momo
+                       </form>}
                     </div>
             </div>
             <button type="submit" className="btn btn-primary wow zoomIn">
