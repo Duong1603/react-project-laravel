@@ -34,7 +34,7 @@ const publicRoutes = [
   },
   {
     path: "/blogs",
-    component: IndexBlog,
+    component: SearchPage,
   },
   {
     path: "/detail-blog",
@@ -47,6 +47,12 @@ const publicRoutes = [
   },
   {
     path: "/search/category/:id",
+
+    component: SearchPage,
+  },
+  {
+    path: "/search/category",
+
     component: SearchPage,
   }
 ];

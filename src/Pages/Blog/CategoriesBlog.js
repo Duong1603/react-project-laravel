@@ -65,7 +65,7 @@ export default function CategoriesBlog() {
           <h3 className="sidebar-title">Categories</h3>
           <ul className="categories">
             <li>
-              <Link to={'/blogs'} >All <span>100</span></Link>
+              <Link to={'/search/category'} >All <span>100</span></Link>
             </li>
             {data.cateList.map((category, index) => {
               return (
