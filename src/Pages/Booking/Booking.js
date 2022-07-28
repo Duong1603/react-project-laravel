@@ -15,6 +15,10 @@ const localizer = momentLocalizer(moment);
 
 export default function ReactBigCalendar() {
 
+    const beforeWorkMorning = 8, lunch = [11,12,13],afterWorking = [16,17]
+    const borderWorkHour = [beforeWorkMorning,...lunch,...afterWorking];
+    const workingMinutes = [0,30];
+    const timeSessionPro = 2;
     // handle navigate
     const history = useNavigate();
     const id = useParams();
@@ -40,12 +44,12 @@ export default function ReactBigCalendar() {
             },
         }),
         // can not pick out side working time
-        ...((moment(date).hour() <= 8 ||
+        ...((moment(date).hour() <= borderWorkHour[0] ||
             moment(date).day() === 0 ||
-            moment(date).hour() === 12 ||
-            (moment(date).hour() === 13 && moment(date).minute() < 30) ||
-            moment(date).hour() >= 17 ||
-            (moment(date).hour() === 16 && moment(date).minute() >= 30)) && {
+            moment(date).hour() === borderWorkHour[2] ||
+            (moment(date).hour() === borderWorkHour[3] && moment(date).minute() < workingMinutes[1]) ||
+            moment(date).hour() >= borderWorkHour[5] ||
+            (moment(date).hour() === borderWorkHour[4] && moment(date).minute() >= workingMinutes[1])) && {
             style: {
             backgroundColor: "#fff990",
             color: "black",
@@ -86,11 +90,11 @@ export default function ReactBigCalendar() {
     };
 
     const availableMorning = (start,end)=>{
-       if( start.getHours() > 8 && (end.getHours() <= 11 ||(end.getHours() <= 12 && end.getMinutes() < 30)) ) return true
+       if( start.getHours() > borderWorkHour[0] && (end.getHours() <= borderWorkHour[1] ||(end.getHours() <= borderWorkHour[2] && end.getMinutes() < workingMinutes[1])) ) return true
        return false
     }
     const availableAfternoon = (start,end)=>{
-        if((start.getHours() > 13  || (start.getHours() === 13 && start.getMinutes() >= 30))  && (end.getHours() <= 16 || end.getHours() === 16 && end.getMinutes()===30)) return true
+        if((start.getHours() > borderWorkHour[3]  || (start.getHours() === borderWorkHour[3] && start.getMinutes() >= workingMinutes[1]))  && (end.getHours() <= borderWorkHour[4] || end.getHours() === borderWorkHour[4] && end.getMinutes()===workingMinutes[1])) return true
         return false
     }
     const pickSession1 = (start, end) => {
@@ -111,7 +115,7 @@ export default function ReactBigCalendar() {
 
     const pickSession2 = (start, end) => {
         if (
-        start.getHours() + 2 === end.getHours() &&
+        start.getHours() + timeSessionPro === end.getHours() &&
         start.getMinutes() === end.getMinutes()
         ) {
         setPick([
@@ -126,7 +130,7 @@ export default function ReactBigCalendar() {
 
     const pickSession3 = (start, end) => {
         if (
-        start.getHours() + 2 === end.getHours() &&
+        start.getHours() + timeSessionPro === end.getHours() &&
         start.getMinutes() === end.getMinutes()
         ) {
         if (pick.length == 3) {
