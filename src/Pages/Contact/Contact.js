@@ -1,12 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { postContact } from "../../Services/API/contactService";
 import Banner from "../../Components/Banner/Banner";
-import Footer from "../../Components/Footer/Footer";
 import FormHandle from "../../Components/Form/FormHandle";
-import Header from "../../Components/Header/Header";
 import Swal from "sweetalert2";
 import MoveToTop from "../../Components/MoveToTop/MoveToTop";
-import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
     const [form, setForm] = useState({
@@ -63,7 +61,6 @@ export default function Contact() {
     return (
         <>
             <MoveToTop/>
-            <Header />
             <Banner name={"Contact"} />
             <div className="page-section">
                 <div className="container">
@@ -75,7 +72,6 @@ export default function Contact() {
                 />
                 </div>
             </div>
-            <Footer />
         </>
     );
 }

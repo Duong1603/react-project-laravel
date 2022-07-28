@@ -1,13 +1,12 @@
-import Footer from "../../Components/Footer/Footer"
-import Header from "../../Components/Header/Header"
+import Banner from "../../Components/Banner/Banner";
 import CategoriesBlog from "./CategoriesBlog"
-
+import MoveToTop from "../../Components/MoveToTop/MoveToTop";
 const SearchPage = () => {
     return (
         <>
-            <Header />
+            <MoveToTop />
+            <Banner name={"Blogs"}></Banner>
             <CategoriesBlog />
-            <Footer/>
         </>
     )
 }
