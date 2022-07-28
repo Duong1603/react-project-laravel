@@ -7,7 +7,9 @@ import Session from "../Pages/Session/Session";
 import IndexBlog from "../Pages/Blog/IndexBlog";
 import IndexDetail from "../Pages/DetailBlog/IndexDetail";
 import ReactBigCalendar from "../Pages/Booking/Booking";
-import CardCategory from "../Pages/Blog/CardCategory";
+import CategoriesBlog from "../Pages/Blog/CategoriesBlog";
+import SearchPage from "../Pages/Blog/SearchPage";
+
 const publicRoutes = [
   {
     path: "/",
@@ -44,13 +46,12 @@ const publicRoutes = [
     component: ReactBigCalendar,
   },
   {
-    path: "/search/:id",
-    component: CardCategory,
-  },
+    path: "/search/category/:id",
+    component: SearchPage,
+  }
 ];
 
 const privateRoutes = [
-
 ]
 
 export {publicRoutes,privateRoutes}
