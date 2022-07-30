@@ -65,7 +65,7 @@ export default function ReactBigCalendar() {
             ) {
             // pass time > now 
             if (start >= new Date()) {
-                // pass 30 minutes
+                // pass 2 hours
                 if ( start.getHours() + 2 === end.getHours() && start.getMinutes() === end.getMinutes() ) {
                 setPick([
                     {
@@ -77,7 +77,7 @@ export default function ReactBigCalendar() {
                 }
             }
             }
-    };
+        };
     return (
         <div className="App">
             <h1>Time for GMT+7</h1>

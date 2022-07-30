@@ -9,6 +9,7 @@ import IndexDetailSession from "../Pages/Session/IndexDetailSession";
 import ReactBigCalendar from "../Pages/Booking/Booking";
 import SearchPage from "../Pages/Blog/SearchPage";
 
+import CheckOut from "../Pages/CheckOut/CheckOut";
 const publicRoutes = [
   {
     path: "/",
@@ -49,6 +50,7 @@ const publicRoutes = [
     component: ReactBigCalendar,
   },
   {
+
     path: "/search/category/:id",
 
     component: SearchPage,
@@ -56,7 +58,10 @@ const publicRoutes = [
   {
     path: "/search/category",
 
-    component: SearchPage,
+    component: SearchPage,}
+    {
+    path:'check-out',
+    component: CheckOut
   }
 ];
 
