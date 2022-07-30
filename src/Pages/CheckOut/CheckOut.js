@@ -16,7 +16,7 @@ export default function CheckOut() {
     const handleSubmit = ()=>{
         calculateFee().then(res=>{
             console.log(res);
-            window.location.href=res.data.url;
+            window.location.href=res.data.url
         })
         
     }
