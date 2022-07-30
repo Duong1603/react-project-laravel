@@ -9,6 +9,7 @@ import IndexDetail from "../Pages/DetailBlog/IndexDetail";
 import IndexDetailSession from "../Pages/Session/IndexDetailSession";
 import ReactBigCalendar from "../Pages/Booking/Booking";
 import CheckOut from "../Pages/CheckOut/CheckOut";
+import Momo from "../Pages/Momo/Momo";
 const publicRoutes = [
   {
     path: "/",
@@ -49,8 +50,13 @@ const publicRoutes = [
     component: ReactBigCalendar,
   },
   {
-    path:'check-out',
+    path:'/check-out',
     component: CheckOut
+  }
+  ,
+  {
+    path:'/momo-payment',
+    component: Momo
   }
 ];
 
