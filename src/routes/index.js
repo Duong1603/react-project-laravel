@@ -4,10 +4,11 @@ import Contact from "../Pages/Contact/Contact";
 import Error from "../Pages/Error";
 import indexAbout from "../Pages/AboutUs/indexAbout";
 import Session from "../Pages/Session/Session";
-import IndexBlog from "../Pages/Blog/IndexBlog";
 import IndexDetail from "../Pages/DetailBlog/IndexDetail";
 import IndexDetailSession from "../Pages/Session/IndexDetailSession";
 import ReactBigCalendar from "../Pages/Booking/Booking";
+import SearchPage from "../Pages/Blog/SearchPage";
+
 import CheckOut from "../Pages/CheckOut/CheckOut";
 const publicRoutes = [
   {
@@ -37,7 +38,7 @@ const publicRoutes = [
   },
   {
     path: "/blogs",
-    component: IndexBlog,
+    component: SearchPage,
   },
   {
     path: "/detail-blog",
@@ -49,13 +50,22 @@ const publicRoutes = [
     component: ReactBigCalendar,
   },
   {
+
+    path: "/search/category/:id",
+
+    component: SearchPage,
+  },
+  {
+    path: "/search/category",
+
+    component: SearchPage,}
+    {
     path:'check-out',
     component: CheckOut
   }
 ];
 
 const privateRoutes = [
-
 ]
 
-export {publicRoutes,privateRoutes}
+export { publicRoutes, privateRoutes }

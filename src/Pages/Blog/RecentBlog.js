@@ -26,7 +26,7 @@ export default function RecentBlog() {
         </div>
       </div>
       <div className="blog-item">
-        <a className="post-thumb" href>
+        <a className="post-thumb" href="">
           <img src="../assets/img/blog/blog_2.jpg" alt="" />
         </a>
         <div className="content">

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { navLink } from "../../Services/NavLink";
+
 export default function Header() {
-    
     const location = useLocation();
-    
     return (
         <header>
             <div className="topbar">
@@ -24,10 +23,10 @@ export default function Header() {
                     <div className="col-sm-4 text-right text-sm">
                     <div className="social-mini-button">
                         <a href="#">
-                        <img style={{width:'1.5rem'}} src="assets/fonts/vietnam.svg"/>
+                        <img style={{width:'1.5rem'}} src="/assets/fonts/vietnam.svg"/>
                         </a>
                         <a href="#">
-                        <img style={{width:'1.5rem'}} src="assets/fonts/united-kingdom.svg"/>
+                        <img style={{width:'1.5rem'}} src="/assets/fonts/united-kingdom.svg"/>
                         </a>
                     </div>
                     </div>
