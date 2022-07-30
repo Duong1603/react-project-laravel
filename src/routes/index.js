@@ -8,6 +8,7 @@ import IndexBlog from "../Pages/Blog/IndexBlog";
 import IndexDetail from "../Pages/DetailBlog/IndexDetail";
 import IndexDetailSession from "../Pages/Session/IndexDetailSession";
 import ReactBigCalendar from "../Pages/Booking/Booking";
+import CheckOut from "../Pages/CheckOut/CheckOut";
 const publicRoutes = [
   {
     path: "/",
@@ -47,6 +48,10 @@ const publicRoutes = [
     path: "/booking/:id",
     component: ReactBigCalendar,
   },
+  {
+    path:'check-out',
+    component: CheckOut
+  }
 ];
 
 const privateRoutes = [
