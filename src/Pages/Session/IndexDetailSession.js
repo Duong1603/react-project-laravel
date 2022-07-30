@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import MoveToTop from "../../Components/MoveToTop/MoveToTop";
 import "./DetailSession.css";
 import axios from "axios";
+import { Link, useParams } from "react-router-dom";
 export default function IndexDetailSession() {
+    let {id } = useParams();
     const [packages, setPackages] = useState({});
     const fetchPackages = async () => {
         await axios.get(`http://localhost:8000/api/package/${1}`).then(res => {
@@ -43,7 +45,7 @@ export default function IndexDetailSession() {
                                 <li>They're linked to a lowest risk of diabetes</li>
                             </ul>
                         </div>
-                        <button className="buy--btn">ADD TO CART</button>
+                        <Link to={`/booking/${id}`} className="buy--btn">ADD TO CART</Link>
                     </div>
                 </section>
                 <div>

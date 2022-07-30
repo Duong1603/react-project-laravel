@@ -22,6 +22,7 @@ const ReadMore = ({ children }) => {
 };
 
 export default function ContentSession() {
+  
   const [packages, setPackages] = useState([]);
   const fetchPackages = async () => {
     await axios.get(`http://localhost:8000/api/package`).then(({ data }) => {
@@ -31,6 +32,7 @@ export default function ContentSession() {
   useEffect(() => {
     fetchPackages();
   }, []);
+  console.log(packages);
   return (
     <div className="container-session">
       <MoveToTop />
@@ -103,29 +105,28 @@ export default function ContentSession() {
             version of you that you’ve always wanted to be.
           </p>
           <div className="col-lg-12 mt-5">
-            <h1 className="text-center mb-5 wow fadeInUp">Session</h1>
             <div className="row justify-content-center">
-              <Link to={"/session/1"} style={{ width: "1000px" }}>
-                <div className="col-md-6 col-lg-4 zoomIn">
-                  {packages.length > 0 &&
-                    packages.map((row, key) => (
-                      <div className="card-doctor">
-                        <div className="header">
-                          <img src={row.image} alt="..." />
-                          <div className="meta">
-                            <Link style={{ width: "100px" }} to={"/booking/1"}>
-                              <span>contact</span>
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="body">
-                          <h4 className="text-xl mb-0">{row.name}</h4>
-                          <p>{row.description}</p>
+              {packages.length > 0 &&
+                packages.map((row, key) => (
+                  <div  key={key} className=" col-lg-4 zoomIn">
+                  <Link to={`/session/${row.id}`}>
+                  <div className="card-doctor">
+                      <div className="header">
+                        <img src={row.image} alt="..." />
+                        <div className="meta">
+                          <Link style={{ width: "100px" }} to={"/booking/1"}>
+                            <span>contact</span>
+                          </Link>
                         </div>
                       </div>
-                    ))}
-                </div>
-              </Link>
+                      <div className="body">
+                        <h4 className="text-xl mb-0">{row.name}</h4>
+                        <p>{row.discription.replace(/(.{100})..+/, "$1....")}</p>
+                      </div>
+                    </div>
+                  </Link>
+                  </div>
+                ))}
             </div>
           </div>
         </div>
