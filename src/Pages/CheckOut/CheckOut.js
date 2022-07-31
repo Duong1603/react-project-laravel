@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import {useNavigate} from "react-router-dom"
 import Form from "../../Components/Form/Form_copy";
+import { calculateFee } from "../../Services/API/callApi";
 
 export default function CheckOut() {
 
@@ -12,7 +13,13 @@ export default function CheckOut() {
         name3: "Full name",
         name4: "Detail more your problem",
     };
-    
+    const handleSubmit = ()=>{
+        calculateFee().then(res=>{
+            console.log(res);
+            window.location.href=res.data.url
+        })
+        
+    }
     const history = useNavigate();
 
     const [data,setData] = useState({lb,isLoaded : false});
@@ -37,7 +44,7 @@ export default function CheckOut() {
         <div>
         <h2>this is checkout page </h2>
         <button onClick={handlerClick}>back</button>
-        {data.isLoaded ?<Form lb={data} /> :""}
+        {data.isLoaded ?<Form onSummitForm={()=>handleSubmit()} lb={data} /> :""}
         </div>
     );
     }

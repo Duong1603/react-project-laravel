@@ -25,7 +25,7 @@ export default function ContentSession() {
   
   const [packages, setPackages] = useState([]);
   const fetchPackages = async () => {
-    await axios.get(`http://localhost:8000/api/package`).then(({ data }) => {
+    await axios.get(`${process.env.REACT_APP_API_KEY}/package`).then(({ data }) => {
       setPackages(data.data);
     });
   };
@@ -114,7 +114,7 @@ export default function ContentSession() {
                       <div className="header">
                         <img src={row.image} alt="..." />
                         <div className="meta">
-                          <Link style={{ width: "100px" }} to={"/booking/1"}>
+                          <Link style={{ width: "100px" }} to={`/session/${row.id}`}>
                             <span>contact</span>
                           </Link>
                         </div>

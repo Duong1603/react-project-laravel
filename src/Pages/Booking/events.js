@@ -1,6 +1,7 @@
-const now = new Date();
+import { apiBooked } from "../../Services/API/callApi";
 
-export default [
+const now = new Date();
+const data =  [
   {
     id: 0,
     title: "All Day Event very long title",
@@ -178,3 +179,5 @@ export default [
     end: new Date(2015, 3, 14, 20, 0, 0)
   }
 ];
+
+apiBooked.then(res=>console.log(res));
