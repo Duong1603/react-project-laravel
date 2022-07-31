@@ -4,10 +4,11 @@ import Contact from "../Pages/Contact/Contact";
 import Error from "../Pages/Error";
 import indexAbout from "../Pages/AboutUs/indexAbout";
 import Session from "../Pages/Session/Session";
-import IndexBlog from "../Pages/Blog/IndexBlog";
 import IndexDetail from "../Pages/DetailBlog/IndexDetail";
 import IndexDetailSession from "../Pages/Session/IndexDetailSession";
 import ReactBigCalendar from "../Pages/Booking/Booking";
+import SearchPage from "../Pages/Blog/SearchPage";
+
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import Momo from "../Pages/Momo/Momo";
 const publicRoutes = [
@@ -38,7 +39,7 @@ const publicRoutes = [
   },
   {
     path: "/blogs",
-    component: IndexBlog,
+    component: SearchPage,
   },
   {
     path: "/detail-blog",
@@ -50,18 +51,25 @@ const publicRoutes = [
     component: ReactBigCalendar,
   },
   {
-    path:'/check-out',
-    component: CheckOut
-  }
-  ,
+    path: "/search/category/:id",
+
+    component: SearchPage,
+  },
   {
-    path:'/momo-payment',
-    component: Momo
-  }
+    path: "/search/category",
+
+    component: SearchPage,
+  },
+  {
+    path: "/check-out",
+    component: CheckOut,
+  },
+  {
+    path: "/momo-payment",
+    component: Momo,
+  },
 ];
 
-const privateRoutes = [
+const privateRoutes = [];
 
-]
-
-export {publicRoutes,privateRoutes}
+export { publicRoutes, privateRoutes };
