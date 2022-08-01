@@ -185,7 +185,6 @@ export default function ReactBigCalendar() {
       }))
       .catch(res=>history("/error"));
   }, []);
-    console.log(eventsData);
   return (
     <div className="App">
       <h1>Time for GMT+7</h1>

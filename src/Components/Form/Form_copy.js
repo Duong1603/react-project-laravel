@@ -1,51 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function Form({ lb, onSummitForm }) {
+export default function Form({ data, onSummitForm, onSetForm, form }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSummitForm();
   };
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    onSetForm({ ...form, [name]: value });
+    
+  };
+  console.log(form);
   return (
     <>
       <div>
-        <h1 className="text-center wow fadeInUp">{lb.form_name}</h1>
+        <h1 className="text-center wow fadeInUp">{data.lb.form_name}</h1>
         <form onSubmit={handleSubmit} className="contact-form mt-5">
           <div className="row">
             <div className="row mb-3 col-8">
               <div className="col-sm-6 py-2 wow fadeInLeft">
-                <label htmlFor="fullName">{lb.name1}</label>
+                <label htmlFor="fullName">{data.lb.name1}</label>
                 <input
+                  name=""
                   type="text"
                   id="fullName"
                   className="form-control"
-                  placeholder={lb.name1 + "..."}
+                  placeholder={data.lb.name1 + "..."}
                 />
               </div>
               <div className="col-sm-6 py-2 wow fadeInRight">
-                <label htmlFor="emailAddress">{lb.name2}</label>
+                <label htmlFor="emailAddress">{data.lb.name2}</label>
                 <input
                   type="text"
                   id="emailAddress"
                   className="form-control"
-                  placeholder={lb.name2 + "..."}
+                  placeholder={data.lb.name2 + "..."}
                 />
               </div>
               <div className="col-12 py-2 wow fadeInUp">
-                <label htmlFor="subject">{lb.name3}</label>
+                <label htmlFor="subject">{data.lb.name3}</label>
                 <input
                   type="text"
                   id="subject"
                   className="form-control"
-                  placeholder={lb.name3 + "..."}
+                  placeholder={data.lb.name3 + "..."}
                 />
               </div>
               <div className="col-12 py-2 wow fadeInUp">
-                <label htmlFor="message">{lb.name4}</label>
+                <label htmlFor="message">{data.lb.name4}</label>
                 <textarea
                   id="message"
                   className="form-control"
                   rows={8}
-                  placeholder={lb.name4 + "..."}
+                  placeholder={data.lb.name4 + "..."}
                   defaultValue={""}
                 />
               </div>
@@ -67,30 +75,42 @@ export default function Form({ lb, onSummitForm }) {
               <p>
                 session:
                 <span>
-                  {lb.state.pick.length === 0
+                  {data.state.pick.length === 0
                     ? "Nothing "
-                    : lb.state.pick.map((item) => (
-                        <p>
+                    : data.state.pick.map((item) => (
+                        <>
                           <a href="# ">{item.title}</a>
                           <br />
                           start: {item.start.getHours()}:{" "}
                           {item.start.getMinutes()}
                           <br />
                           end: {item.end.getHours()}: {item.end.getMinutes()}
-                        </p>
+                        </>
                       ))}
                 </span>
               </p>
-              {lb.state.session == 1 ? (
+              {parseInt(data.state.session) === 1 ? (
                 ""
               ) : (
-                <form>
-                  <input type="radio" value="cast" name="payment" />
-                  tien mat
+                <>
+                  <input
+                    type="radio"
+                    onChange={handleChange}
+                    checked={form.payment == "momo-qr"}
+                    value="momo-qr"
+                    name="payment"
+                  />
+                  momo qr code
                   <br />
-                  <input type="radio" value="momo" name="payment" />
-                  momo
-                </form>
+                  <input
+                    type="radio"
+                    onChange={handleChange}
+                    checked={form.payment == "momo-atm"}
+                    value="momo-atm"
+                    name="payment"
+                  />
+                  momo atm
+                </>
               )}
             </div>
           </div>

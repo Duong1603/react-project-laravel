@@ -21,7 +21,7 @@ export default function CategoriesBlog() {
     var res = await axios.get(`http://127.0.0.1:8000/api/posts/search?${id ? `cateId=${id}` : ""}`);
     const postList = await res.data.data;
     res = await axios.get('http://127.0.0.1:8000/api/categories');
-    const cateList = res.data;
+    const cateList = res.data.data;
     setData({ postList, cateList, isLoaded: true });
   }
   // console.log(data);
