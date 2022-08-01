@@ -7,6 +7,9 @@ const apiBooked = async () => {
   return await axios.get(`${process.env.REACT_APP_API_KEY}/booking`);
 };
 const calculateFee = async ()=>{
-  return await axios.get(`${process.env.REACT_APP_API_KEY}/payment`)
+  return await axios.get(`${process.env.REACT_APP_API_KEY}/payment`);
 }
-export { availableSession, apiBooked,calculateFee };
+const calculateFeeQr = async ()=>{
+  return await axios.get(`${process.env.REACT_APP_API_KEY}/payment-qr`)
+}
+export { availableSession, apiBooked,calculateFee,calculateFeeQr };
