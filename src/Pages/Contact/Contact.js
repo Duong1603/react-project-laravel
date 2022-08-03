@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { postContact } from "../../Services/API/contactService";
+import { postContact } from "../../Services/Api/contactService";
 import Banner from "../../Components/Banner/Banner";
 import FormHandle from "../../Components/Form/FormHandle";
 import Swal from "sweetalert2";

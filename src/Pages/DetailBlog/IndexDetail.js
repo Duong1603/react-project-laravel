@@ -1,6 +1,6 @@
 import React from "react";
 import Detail from "./Detail";
-import Cardleft from "../Blog/Cardleft";
+import CardLeft from "../Blog/CardLeft";
 import Banner from "../../Components/Banner/Banner";
 
 export default function IndexDetail() {
@@ -11,7 +11,7 @@ export default function IndexDetail() {
                 <div className="container">
                 <div className="row">
                     <Detail></Detail>
-                    <Cardleft></Cardleft>
+                    <CardLeft></CardLeft>
                 </div>
                 </div>
             </div>

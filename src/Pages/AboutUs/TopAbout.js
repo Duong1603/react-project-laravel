@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export default function Top_about() {
+export default function TopAbout() {
   return (
     <div>
-        <div className="page-section bg-light">
+      <div className="page-section bg-light">
         <div className="container">
           <div className="row">
             <div className="col-md-4 py-3 wow zoomIn">
@@ -40,5 +40,5 @@ export default function Top_about() {
         </div>
       </div>
     </div>
-  )
+  );
 }

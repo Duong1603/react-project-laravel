@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Welcome_to() {
+export default function Welcome() {
   return (
     <div>
       <div className="page-section">

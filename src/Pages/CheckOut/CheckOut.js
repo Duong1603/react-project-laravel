@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { useNavigate } from "react-router-dom";
 import Form from "../../Components/Form/Form_copy";
-import { calculateFee, calculateFeeQr } from "../../Services/API/callApi";
+import { calculateFee, calculateFeeQr } from "../../Services/Api/callApi";
 
 export default function CheckOut() {
   const lb = {
