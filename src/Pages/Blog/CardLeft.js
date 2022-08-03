@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-const Cardleft = ({ postList }) => {
+const CardLeft = ({ postList }) => {
   return (
     <div className="row">
       {postList.map((post, index) => {
@@ -74,4 +74,4 @@ const Cardleft = ({ postList }) => {
     </div>
   );
 }
-export default Cardleft;
+export default CardLeft;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Our_doctor() {
+export default function OurDoctor() {
   return (
     <div>
       <div className="col-lg-12 mt-5">

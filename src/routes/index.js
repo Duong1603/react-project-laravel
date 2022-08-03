@@ -1,16 +1,14 @@
 // public route
 import Home from "../Pages/Home/Home";
 import Contact from "../Pages/Contact/Contact";
-import Error from "../Pages/Error";
-import indexAbout from "../Pages/AboutUs/indexAbout";
 import Session from "../Pages/Session/Session";
 import IndexDetail from "../Pages/DetailBlog/IndexDetail";
 import IndexDetailSession from "../Pages/Session/IndexDetailSession";
 import ReactBigCalendar from "../Pages/Booking/Booking";
 import SearchPage from "../Pages/Blog/SearchPage";
-
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import Momo from "../Pages/Momo/Momo";
+import AboutUs from "../Pages/AboutUs/AboutUs";
 const publicRoutes = [
   {
     path: "/",
@@ -27,7 +25,7 @@ const publicRoutes = [
   },
   {
     path: "/about",
-    component: indexAbout,
+    component: AboutUs,
   },
   {
     path: "/session",

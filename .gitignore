@@ -28,7 +28,7 @@ firebase.json
 .firebaserc
 
 #env
-.env
+/.env
 
 
 

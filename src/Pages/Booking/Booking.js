@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
-import { apiBooked, availableSession } from "../../Services/API/callApi";
+import { apiBooked, availableSession } from "../../Services/Api/callApi";
 
 moment.locale("en-VN");
 const localizer = momentLocalizer(moment);
