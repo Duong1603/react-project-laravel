@@ -5,14 +5,16 @@ import Banner from "../../Components/Banner/Banner";
 import FormHandle from "../../Components/Form/FormHandle";
 import Swal from "sweetalert2";
 import MoveToTop from "../../Components/MoveToTop/MoveToTop";
+import PreLoader from "../../Components/PreLoader/PreLoader";
 
 export default function Contact() {
     const [form, setForm] = useState({
         name: "",
         phone: "",
         email: "",
-        description: "",
+        problem: "",
     });
+    const [isLoad, setIsLoad] = useState(false);
 
     const navigate = useNavigate();
 
@@ -23,31 +25,28 @@ export default function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        setIsLoad(true);
         postContact(form)
         .then((res) => {
-            const err = res.data.errors;
-            err !== undefined
-            ? Swal.fire({
-                title: "Error!",
-                html: 
-                
-                    `<p>${err.name === undefined ? " ": err.name }</p>
-                    <p>${err.description === undefined ? " ": err.description}</p>
-                    <p>${err.phone === undefined ? " ": err.phone}</p>
-                    <p>${err.email === undefined ? " ": err.email}</p>`,
-                icon: "error",
-                confirmButtonText: "Got it",
-                })
-            : Swal.fire("Good job!", res.data.message, "success")
-                .then(
-                (result) => {
-                    // move to home page
-                    navigate("/");
-                }
-                );
+            setIsLoad(false);
+            Swal.fire("Good job!", res.data.message, "success").then((result) => {
+            navigate("/");
+            });
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            setIsLoad(false);
+            const errors = err.response.data.error;
+            console.log(errors);
+            Swal.fire({
+            title: "Error!",
+            html: `<p>${errors.name ? err.name[0] : " "}</p>
+                                <p>${errors.problem ? errors.problem[0] : " "}</p>
+                                <p>${errors.phone ? errors.phone[0] : " "}</p>
+                                <p>${errors.email ? errors.email[0] : " "}</p>`,
+            icon: "error",
+            confirmButtonText: "Got it",
+            });
+        });
     };
 
     const lb = {
@@ -60,18 +59,22 @@ export default function Contact() {
 
     return (
         <>
-            <MoveToTop/>
-            <Banner name={"Contact"} />
-            <div className="page-section">
-                <div className="container">
+        <MoveToTop />
+        <Banner name={"Contact"} />
+        <div className="page-section">
+            {isLoad ? (
+            <PreLoader />
+            ) : (
+            <div className="container">
                 <FormHandle
-                    form={form}
-                    setForm={handleInput}
-                    lb={lb}
-                    action={handleSubmit}
+                form={form}
+                setForm={handleInput}
+                lb={lb}
+                action={handleSubmit}
                 />
-                </div>
             </div>
+            )}
+        </div>
         </>
     );
 }

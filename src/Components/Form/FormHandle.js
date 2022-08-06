@@ -51,7 +51,7 @@ export default function FormHandle({ lb,form,setForm,action }) {
                     rows={8}
                     placeholder={lb.name4+"..."}
                     value={form.problem}
-                    name='description'
+                    name='problem'
                     onChange={setForm}
                 />
                 </div>
