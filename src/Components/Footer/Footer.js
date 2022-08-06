@@ -21,16 +21,16 @@ export default function Footer() {
                         <h5>More</h5>
                         <ul className="footer-menu">
                         <li>
-                            <a href="#">Terms &amp; Condition</a>
+                            <a href="# ">Terms &amp; Condition</a>
                         </li>
                         <li>
-                            <a href="#">Privacy</a>
+                            <a href="# ">Privacy</a>
                         </li>
                         <li>
-                            <a href="#">Advertise</a>
+                            <a href="# ">Advertise</a>
                         </li>
                         <li>
-                            <a href="#">Join as Doctors</a>
+                            <a href="# ">Join as Doctors</a>
                         </li>
                         </ul>
                     </div>
@@ -38,13 +38,13 @@ export default function Footer() {
                         <h5>Our partner</h5>
                         <ul className="footer-menu">
                         <li>
-                            <a href="#">One-Fitness</a>
+                            <a href="# ">One-Fitness</a>
                         </li>
                         <li>
-                            <a href="#">One-Drugs</a>
+                            <a href="# ">One-Drugs</a>
                         </li>
                         <li>
-                            <a href="#">One-Live</a>
+                            <a href="# ">One-Live</a>
                         </li>
                         </ul>
                     </div>
@@ -62,19 +62,19 @@ export default function Footer() {
                         </a>
                         <h5 className="mt-3">Social Media</h5>
                         <div className="footer-sosmed mt-3">
-                        <a href="#" target="_blank">
+                        <a href="# " target="_blank">
                             <span className="mai-logo-facebook-f" />
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="# " target="_blank">
                             <span className="mai-logo-twitter " />
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="# " target="_blank">
                             <span className="mai-logo-google-plus-g" />
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="# " target="_blank">
                             <span className="mai-logo-instagram" />
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="# " target="_blank">
                             <span className="mai-logo-linkedin" />
                         </a>
                         </div>
@@ -83,7 +83,7 @@ export default function Footer() {
                 <hr />
                 <p id="copyright">
                 Copyright © 2022{" "}
-                <a href="https://www.passerellesnumeriques.org/en/our-actions/vietnam/" target="_blank">
+                <a href="https://www.passerellesnumeriques.org/en/our-actions/vietnam/" >
                 Passerelles numériques Vietnam
                 </a>
                 . All right reserved

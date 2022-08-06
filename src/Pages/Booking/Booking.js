@@ -11,7 +11,7 @@ import { apiBooked, availableSession } from "../../Services/Api/callApi";
 moment.locale("en-VN");
 const localizer = momentLocalizer(moment);
 
-export default function ReactBigCalendar() {
+export default function Booking() {
   const beforeWorkMorning = 8,
     lunch = [11, 12, 13],
     afterWorking = [16, 17];
