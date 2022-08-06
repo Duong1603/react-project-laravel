@@ -3,7 +3,7 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
-
+import "./Booking.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 import { apiBooked, availableSession } from "../../Services/Api/callApi";
@@ -21,9 +21,7 @@ export default function ReactBigCalendar() {
   // handle navigate
   const history = useNavigate();
   const id = useParams();
-
   const [eventsData, setEventsData] = useState([]);
-
   const [times, setTimes] = useState(() => {
     if (parseInt(id.id) === 3) return 3;
     else return 1;
@@ -172,10 +170,11 @@ export default function ReactBigCalendar() {
     console.log("test");
     history("/check-out", { state: { pick, session: id.id } });
   };
-  const convertDateTime = (arr)=>{
-    return arr.map(item=>({...item,
-        start : new Date(item.start),
-        end : new Date(item.end)
+  const convertDateTime = (arr) => {
+    return arr.map(item => ({
+      ...item,
+      start: new Date(item.start),
+      end: new Date(item.end)
     }))
   }
   useEffect(() => {
@@ -183,14 +182,14 @@ export default function ReactBigCalendar() {
       .then(apiBooked().then((res) => {
         setEventsData(convertDateTime(res.data.data));
       }))
-      .catch(res=>history("/error"));
+      .catch(res => history("/error"));
   }, []);
   return (
     <div className="App">
       <h1>Time for GMT+7</h1>
-      <h2>you have: {times === 0 ? times + " But you can change " : times} </h2>
+      <h2>You have: {times === 0 ? times + " But you can change " : times} </h2>
       <h2>{parseInt(id.id) > 0 ? parseInt(id.id) : "id is not a number"}</h2>
-      <button onClick={() => history(-1)}>back</button>
+      <button onClick={() => history(-1)} className="btn btn-primary" id="btn__back">Back</button>
       <Calendar
         views={["day", "agenda", "month", "week"]}
         selectable
@@ -202,8 +201,11 @@ export default function ReactBigCalendar() {
         onSelectEvent={(event) => alert(event.title)}
         onSelectSlot={handleSelect}
         slotPropGetter={slotPropGetter}
+        className="view__calendar"
       />
-      <button onClick={handleConfirm}>Pick</button>
+      <div className="btn__pick--class">
+        <button onClick={handleConfirm} className="btn btn-primary" id="btn__pick">Pick</button>
+      </div>
     </div>
   );
 }
