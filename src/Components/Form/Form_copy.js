@@ -66,7 +66,7 @@ export default function Form({ data, onSummitForm, onSetForm, form }) {
                 />
                 </div>
             </div>
-            <div className="col-4">
+            <div className="col-4" id="checkout">
                 <h2>Booking summary</h2>
                 <p>
                 via:<span>google meeting</span>
