@@ -1,4 +1,5 @@
 import React from "react";
+import "./Form_copy.css";
 
 export default function Form({ data, onSummitForm, onSetForm, form }) {
     const handleSubmit = (e) => {
