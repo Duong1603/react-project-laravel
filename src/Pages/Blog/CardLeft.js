@@ -1,37 +1,35 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 const CardLeft = ({ postList }) => {
   return (
     <div className="row">
       {postList.map((post, index) => {
         return (
           <div className="col-sm-6 py-3" key={index}>
-            <div className="card-blog">
-              <div className="header">
-                <div className="post-category">
-                  <a href="#">{post.nameCategory}</a>
-                </div>
-                <a href="blog-details" className="post-thumb">
-                  <img src={'/assets/img/blog/' + post.image} alt="" />
-                </a>
-              </div>
-              <div className="body">
-                <h5 className="post-title">
-                  <a href="blog-details.html">
-                    {post.title}
-                  </a>
-                </h5>
-                <div className="site-info">
-                  <div className="avatar mr-2">
-                    <div className="avatar-img">
-                      <img src="/assets/img/person/person_1.jpg" alt="" />
-                    </div>
-                    <span>Roger Adams</span>
+            <Link to={`/blogs/${post.id}`}>
+              <div className="card-blog">
+                <div className="header">
+                  <div className="post-category">
+                    <a href="#">{post.nameCategory}</a>
                   </div>
-                  <span className="mai-time" /> 1 week ago
+                  <img src={'/assets/img/blog/' + post.image} alt="" />
+                </div>
+                <div className="body">
+                  <h5 className="post-title">
+                    {post.title}
+                  </h5>
+                  <div className="site-info">
+                    <div className="avatar mr-2">
+                      <div className="avatar-img">
+                        <img src="/assets/img/person/person_1.jpg" alt="" />
+                      </div>
+                      <span>Roger Adams</span>
+                    </div>
+                    <span className="mai-time" /> 1 week ago
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         )
       })}
