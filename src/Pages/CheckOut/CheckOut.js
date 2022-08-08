@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { useNavigate } from "react-router-dom";
 import Form from "../../Components/Form/Form_copy";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import "./CheckOut.css";
+
 import {
 //   calculateFee,
 //   calculateFeeQr,
@@ -56,8 +59,8 @@ export default function CheckOut() {
 
     return (
         <div>
-        <h2>this is checkout page </h2>
-        <button onClick={handlerClick}>back</button>
+        <h2>This is checkout page </h2>
+        <button onClick={handlerClick}>Back </button>
         {data.isLoaded ? (
             <Form
             form={form}
