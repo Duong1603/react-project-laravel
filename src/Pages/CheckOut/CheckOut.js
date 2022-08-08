@@ -6,6 +6,9 @@ import PreLoader from "../../Components/PreLoader/PreLoader";
 import { submit } from "../../Services/Api/callApi";
 import { formatDate } from "../../Services/Formatting/date";
 import { getModelFail, getModelSuccess } from "../../Services/Modal/Modal";
+import "./CheckOut.css";
+
+
 
 export default function CheckOut() {
     const { state } = useLocation();
@@ -65,11 +68,11 @@ export default function CheckOut() {
 
     return (
         <div>
-        <h2>this is checkout page </h2>
         <button onClick={handlerClick}>back</button>
         {preLoad ? (
             <PreLoader />
         ) : data.isLoaded ? (
+
             <Form
             form={form}
             onSetForm={setForm}

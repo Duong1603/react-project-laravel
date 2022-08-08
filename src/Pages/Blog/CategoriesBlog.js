@@ -12,35 +12,41 @@ export default function CategoriesBlog() {
     postList: [],
     cateList: [],
   });
+  const [totalPost, setTotalPost] = useState();
   const { id } = useParams();
   const [titleSK, setTitleSK] = useState();
   useEffect(() => {
-    getData();
+    getData(id);
   }, [id]);
-  const getData = async () => {
-    getBlogs().then(
+  const getData = async (id) => {
+    getBlogs(id).then(
       axios.spread((res1, res2) => {
         const postList = res1.data.data;
         const cateList = res2.data.data;
         console.log(postList);
         setData({ postList, cateList, isLoaded: true });
+        handleSumPost(cateList);
       })
     );
-  };    
+  };  
+  const handleSumPost = (cateList)=>{
+    var result = cateList.reduce(function (acc, category ) { return acc + category.total; }, 0);
+    setTotalPost(result);
+  }
   const handleSearch = async (e) => {
     e.preventDefault();
     searchType(titleSK).then((res) => {
       const postList = res.data.data;
       setData({ ...data, postList, isLoaded: true });
-    });
-  };
 
+    });
+
+  };
   return (
     <div className="row">
       <div className="col-lg-8">
         {data.isLoaded && <CardLeft postList={data.postList} />}
       </div>
-
       <div className="col-lg-4">
         <div className="sidebar">
           <div className="sidebar-block">
@@ -67,7 +73,7 @@ export default function CategoriesBlog() {
           <ul className="categories">
             <li>
               <Link to={"/search/category"}>
-                All <span>100</span>
+                All <span>{totalPost}</span>
               </Link>
             </li>
             {data.cateList.map((category, index) => {

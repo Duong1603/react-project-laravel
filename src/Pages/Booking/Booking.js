@@ -12,14 +12,13 @@ moment.locale("en-VN");
 const localizer = momentLocalizer(moment);
 
 export default function Booking() {
-
     const beforeWorkMorning = 8,
         lunch = [11, 12, 13],
         afterWorking = [16, 17];
     const borderWorkHour = [beforeWorkMorning, ...lunch, ...afterWorking];
     const workingMinutes = [0, 30];
     const timeSessionPro = 2;
-    
+
     const history = useNavigate();
     const id = useParams();
     const [eventsData, setEventsData] = useState([]);
@@ -29,17 +28,23 @@ export default function Booking() {
     });
     const [pick, setPick] = useState([]);
 
+    const pickTime = (start, end) => ({
+        start,
+        end,
+        title: " meeting with mr Phuong",
+    });
+
     const slotPropGetter = useCallback(
         (date) => ({
         className: "slotDefault",
-      
+
         ...(moment(date) < new Date() && {
             style: {
             backgroundColor: "darkgreen",
             color: "white",
             },
         }),
-       
+
         ...((moment(date).hour() <= borderWorkHour[0] ||
             moment(date).day() === 0 ||
             moment(date).hour() === borderWorkHour[2] ||
@@ -64,9 +69,7 @@ export default function Booking() {
     };
 
     const handleSelect = ({ start, end }) => {
-      
         if (availableMorning(start, end) || availableAfternoon(start, end)) {
-  
         if (start >= new Date()) {
             switch (parseInt(id.id)) {
             case 1:
@@ -113,13 +116,7 @@ export default function Booking() {
         (start.getHours() === end.getHours() - 1 &&
             start.getMinutes() > end.getMinutes())
         ) {
-        setPick([
-            {
-            start,
-            end,
-            title: "test",
-            },
-        ]);
+        setPick([pickTime(start, end)]);
         }
     };
 
@@ -128,13 +125,7 @@ export default function Booking() {
         start.getHours() + timeSessionPro === end.getHours() &&
         start.getMinutes() === end.getMinutes()
         ) {
-        setPick([
-            {
-            start,
-            end,
-            title: "test",
-            },
-        ]);
+        setPick([pickTime(start, end)]);
         }
     };
 
@@ -144,23 +135,9 @@ export default function Booking() {
         start.getMinutes() === end.getMinutes()
         ) {
         if (pick.length == 3) {
-            setPick([
-            ...pick.splice(1),
-            {
-                start,
-                end,
-                title: "test",
-            },
-            ]);
+            setPick([...pick.splice(1), pickTime(start, end)]);
         } else {
-            setPick([
-            ...pick,
-            {
-                start,
-                end,
-                title: "test",
-            },
-            ]);
+            setPick([...pick, pickTime(start, end)]);
             setTimes((pre) => pre - 1);
         }
         }
@@ -171,25 +148,32 @@ export default function Booking() {
         history("/check-out", { state: { pick, session: id.id } });
     };
     const convertDateTime = (arr) => {
-        return arr.map(item => ({
+        return arr.map((item) => ({
         ...item,
         start: new Date(item.start),
-        end: new Date(item.end)
-        }))
-    }
+        end: new Date(item.end),
+        }));
+    };
     useEffect(() => {
         availableSession(id.id)
-        .then(apiBooked().then((res) => {
+        .then(
+            apiBooked().then((res) => {
             setEventsData(convertDateTime(res.data.data));
-        }))
-        .catch(res => history("/error"));
+            })
+        )
+        .catch((res) => history("/error"));
     }, []);
     return (
         <div className="App">
         <h1>Time for GMT+7</h1>
         <h2>You have: {times === 0 ? times + " But you can change " : times} </h2>
-        <h2>{parseInt(id.id) > 0 ? parseInt(id.id) : "id is not a number"}</h2>
-        <button onClick={() => history(-1)} className="btn btn-primary" id="btn__back">Back</button>
+        <button
+            onClick={() => history(-1)}
+            className="btn btn-primary"
+            id="btn__back"
+        >
+            Back
+        </button>
         <Calendar
             views={["day", "agenda", "month", "week"]}
             selectable
@@ -204,7 +188,13 @@ export default function Booking() {
             className="view__calendar"
         />
         <div className="btn__pick--class">
-            <button onClick={handleConfirm} className="btn btn-primary" id="btn__pick">Pick</button>
+            <button
+            onClick={handleConfirm}
+            className="btn btn-primary"
+            id="btn__pick"
+            >
+            Pick
+            </button>
         </div>
         </div>
     );
