@@ -71,13 +71,13 @@ export default function Form({ data, onSummitForm, onSetForm, form }) {
                 via:<span>google meeting</span>
                 </p>
                 <p>
-                name:<span>google meeting</span>
+                name:<span> {form.name} </span>
                 </p>
                 <p>
-                email:<span>google meeting</span>
+                email:<span> {form.email} </span>
                 </p>
                 <p>
-                phone:<span>google meeting</span>
+                phone:<span> {form.phone} </span>
                 </p>
                 <p>
                 session:

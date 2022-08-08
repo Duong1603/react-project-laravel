@@ -11,7 +11,7 @@ export default function IndexDetail() {
                 <div className="container">
                 <div className="row">
                     <Detail></Detail>
-                    <CardLeft></CardLeft>
+                    {/* <CardLeft></CardLeft> */}
                 </div>
                 </div>
             </div>
