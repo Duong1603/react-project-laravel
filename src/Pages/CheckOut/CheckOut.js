@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { useNavigate } from "react-router-dom";
 import Form from "../../Components/Form/Form_copy";
-import "react-big-calendar/lib/css/react-big-calendar.css";
+import PreLoader from "../../Components/PreLoader/PreLoader";
+import { submit } from "../../Services/Api/callApi";
+import { formatDate } from "../../Services/Formatting/date";
+import { getModelFail, getModelSuccess } from "../../Services/Modal/Modal";
 import "./CheckOut.css";
 
-import {
-//   calculateFee,
-//   calculateFeeQr,
-  submit,
-} from "../../Services/Api/callApi";
+
 
 export default function CheckOut() {
+    const { state } = useLocation();
+    const history = useNavigate();
     const lb = {
         form_name: "Booking",
         name1: "Phone",
@@ -19,31 +20,39 @@ export default function CheckOut() {
         name3: "Full name",
         name4: "Detail more your problem",
     };
-   
-    const handleSubmit = () => {
-        
-        console.log(form);
-        // if (form.payment === "momo-qr")
-        //   calculateFeeQr().then((res) => {
-        //     console.log(res);
-        //     window.location.href = res.data.url;
-        //   });
-        // else {
-        //   calculateFee().then((res) => {
-        //     console.log(res);
-        //     window.location.href = res.data.url;
-        //   });
-        // }
-        submit()
-        .then((res) => console.log(res.data))
-        .catch((err) => console.log(err));
+    const formatDateAfterClick = (arr) => {
+        return arr.map((item) => {
+        const start_meeting =formatDate(item.start);
+        const end_meeting = formatDate(item.end);
+        return {
+            start_meeting,
+            end_meeting
+        };
+        });
     };
-    const history = useNavigate();
-
     const [data, setData] = useState({ lb, isLoaded: false });
-    const [form, setForm] = useState({});
+    const [form, setForm] = useState({
+        session: formatDateAfterClick(state.pick),
+        package: state.session,
+    });
+    const [preLoad, setPreLoad] = useState(false);
 
-    const { state } = useLocation();
+    const handleSubmit = () => {
+        formatDateAfterClick(state.pick);
+        console.log(form);
+        setPreLoad(true);
+        submit(form)
+        .then((res) => {
+            console.log(res.data);
+            setPreLoad(false);
+            getModelSuccess(res.data.message).then((result) => history("/"));
+        })
+        .catch((err) => {
+            console.log(err.response.data);
+            setPreLoad(false);
+            getModelFail(err.response.data.error);
+        });
+    };
 
     const handlerClick = () => {
         return history(-1);
@@ -59,13 +68,15 @@ export default function CheckOut() {
 
     return (
         <div>
-        <h2>This is checkout page </h2>
-        <button onClick={handlerClick}>Back </button>
-        {data.isLoaded ? (
+        <button onClick={handlerClick}>back</button>
+        {preLoad ? (
+            <PreLoader />
+        ) : data.isLoaded ? (
+
             <Form
             form={form}
             onSetForm={setForm}
-            onSummitForm={() => handleSubmit()}
+            onSummitForm={handleSubmit}
             data={data}
             />
         ) : (
