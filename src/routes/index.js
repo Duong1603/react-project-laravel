@@ -40,7 +40,7 @@ const publicRoutes = [
         component: SearchPage,
     },
     {
-        path: "/detail-blog",
+        path: "/blogs/:id",
         component: IndexDetail,
     },
     ,
