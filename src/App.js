@@ -4,7 +4,7 @@ import Header from "./Components/Header/Header";
 import { publicRoutes } from "./routes";
 // code for firebase
 // --------------------------------------------------------------//
-// Import the functions you need from the SDKs you need
+// // Import the functions you need from the SDKs you need
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 
@@ -22,8 +22,8 @@ import { publicRoutes } from "./routes";
 //   appId: "1:88924290787:web:b07e792062b8546b9c4fd6",
 //   measurementId: "G-TZTYM030P9"
 // };
-// // --------------------------------------------------------------//
-// // Initialize Firebase
+// --------------------------------------------------------------//
+// Initialize Firebase
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);    
 function App() {
