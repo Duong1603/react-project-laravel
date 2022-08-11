@@ -8,6 +8,7 @@ import Booking from "../Pages/Booking/Booking";
 import SearchPage from "../Pages/Blog/SearchPage";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import Momo from "../Pages/Momo/Momo";
+import Error from '../Pages/Error'
 import AboutUs from "../Pages/AboutUs/AboutUs";
 const publicRoutes = [
     {
