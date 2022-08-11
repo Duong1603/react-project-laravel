@@ -22,9 +22,9 @@ export default function Header() {
                     </div>
                     <div className="col-sm-4 text-right text-sm">
                     <div className="social-mini-button">
-                        <a href="#">
+                        {/* <a href="#">
                         <img style={{width:'1.5rem'}} src="/assets/fonts/vietnam.svg"/>
-                        </a>
+                        </a> */}
                         <a href="#">
                         <img style={{width:'1.5rem'}} src="/assets/fonts/united-kingdom.svg"/>
                         </a>
@@ -41,7 +41,7 @@ export default function Header() {
                 <Link className="navbar-brand" to={"/"}>
                     <span className="text-primary">One</span>-Health
                 </Link>
-                <form action="#">
+                {/* <form action="#">
                     <div className="input-group input-navbar">
                     <div className="input-group-prepend">
                         <span className="input-group-text" id="icon-addon1">
@@ -56,7 +56,7 @@ export default function Header() {
                         aria-describedby="icon-addon1"
                     />
                     </div>
-                </form>
+                </form> */}
                 <button
                     className="navbar-toggler"
                     type="button"
