@@ -23,7 +23,6 @@ export default function CategoriesBlog() {
       axios.spread((res1, res2) => {
         const postList = res1.data.data;
         const cateList = res2.data.data;
-        console.log(postList);
         setData({ postList, cateList, isLoaded: true });
         handleSumPost(cateList);
       })

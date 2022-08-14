@@ -1,20 +1,14 @@
 import React, { useEffect, useState } from "react";
 import MoveToTop from "../../Components/MoveToTop/MoveToTop";
 import "./DetailSession.css";
-import axios from "axios";
+import {availableSession} from '../../Services/Api/callApi'
 import { Link, useParams } from "react-router-dom";
 export default function IndexDetailSession() {
-    let {id } = useParams();
+    let {id} = useParams();
     const [packages, setPackages] = useState({});
-    const fetchPackages = async () => {
-        await axios.get(`http://localhost:8000/api/package/${1}`).then(res => {
-            console.log(res.data.data);
-            setPackages(res.data.data)
-        })
-            ;
-    };
+
     useEffect(() => {
-        fetchPackages();
+        availableSession(id).then(res=>setPackages(res.data.data)).catch(err=>console.log(err))
     }, []);
     return (
         <>
@@ -45,7 +39,7 @@ export default function IndexDetailSession() {
                                 <li>They're linked to a lowest risk of diabetes</li>
                             </ul>
                         </div>
-                        <Link to={`/booking/${id}`} className="buy--btn">ADD TO CART</Link>
+                        <Link to={`/booking/${id}`} className="buy--btn">Book now</Link>
                     </div>
                 </section>
                 <div>
