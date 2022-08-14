@@ -702,8 +702,8 @@ pre code {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  /* margin-right: -15px;
+  margin-left: -15px; */
 }
 
 .no-gutters {
@@ -725,8 +725,6 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 .col {
@@ -8459,7 +8457,8 @@ button.bg-dark:focus {
 
 .pt-3,
 .py-3 {
-  padding-top: 1rem !important;
+  /* padding-top: 1rem !important; */
+  padding: 1rem !important;
 }
 
 .pr-3,
@@ -8469,7 +8468,7 @@ button.bg-dark:focus {
 
 .pb-3,
 .py-3 {
-  padding-bottom: 1rem !important;
+  /* padding-bottom: 1rem !important; */
 }
 
 .pl-3,

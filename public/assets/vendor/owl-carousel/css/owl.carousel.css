@@ -108,7 +108,7 @@
   transition: all 0.3s ease;
 }
 
-.owl-carousel .owl-nav button.owl-prev::after,
+/* .owl-carousel .owl-nav button.owl-prev::after,
 .owl-carousel button.owl-dot::after {
   content: "\2c2";
 }
@@ -116,7 +116,7 @@
 .owl-carousel .owl-nav button.owl-next::after,
 .owl-carousel button.owl-dot::after {
   content: "\2c3";
-}
+} */
 
 .owl-carousel .owl-nav button.owl-prev:hover,
 .owl-carousel .owl-nav button.owl-next:hover,
