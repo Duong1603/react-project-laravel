@@ -48,8 +48,6 @@ export default function ReactBigCalendar() {
     };
 
     const handleSelect = ({ start, end }) => {
-        console.log(start.getDay());
-        console.log(end);
         // pass working time
         if (
         (start.getHours() > 8 &&
