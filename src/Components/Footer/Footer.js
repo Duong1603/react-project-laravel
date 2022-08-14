@@ -46,7 +46,7 @@ export default function Footer() {
                         <span className="mai-logo-facebook-f" />
                     </a>
                     <a href="# " target="_blank">
-                        <span className="mai-logo-twitter " />
+                        <span className="mai-logo-twitter" />
                     </a>
                     <a href="# " target="_blank">
                         <span className="mai-logo-google-plus-g" />

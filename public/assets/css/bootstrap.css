@@ -570,16 +570,76 @@ pre code {
   box-shadow: none;
   border: 1px solid white;
   color: white;
-  padding: 3px 60px 3px 60px;
+  padding: 15px  60px 15px 60px;
 }
+
+.bg-image1{
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 100%;
+}
+
 .slogan-btn{
-  text-align: center;
-  margin-bottom: 100px;
+  margin: 0 auto;
+  width: 20%;
 }
+
 .page-section #text-slogan{
   text-align: center;
-  font-size: 4rem;
 }
+/*  */
+@media screen and (max-width: 1024px) {
+  .bg-image1{
+    height: auto;
+  }
+  /* .slogan-btn{
+    margin: 0 auto;
+    width: 80%;
+  } */
+  .slogan{
+    padding: 15px 30px 15px 30px;
+  }
+
+  .font-weight-normal{
+    padding: 37px 15px 67px 15px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .bg-image1{
+    width: 22.4rem;
+    height: 19.4rem;
+  }
+  /* .slogan-btn{
+    width: 50%;
+  } */
+  .slogan-btn button{
+    /* margin: 0 auto; */
+    display: none;
+  }
+  
+  .page-section #text-slogan{
+    font-size: 22px;
+    text-align: center;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .bg-image1{
+    width: 18.95rem;
+    height: 18.95rem;
+  }
+  .page-section #text-slogan{
+    width: 100%;
+  }
+  .slogan-btn{
+    width: 70%;
+  }
+}
+
+/*  */
 
 @media (min-width: 576px) {
   .container {
@@ -642,8 +702,8 @@ pre code {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  /* margin-right: -15px;
+  margin-left: -15px; */
 }
 
 .no-gutters {
@@ -665,8 +725,6 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 .col {
@@ -8399,7 +8457,8 @@ button.bg-dark:focus {
 
 .pt-3,
 .py-3 {
-  padding-top: 1rem !important;
+  /* padding-top: 1rem !important; */
+  padding: 1rem !important;
 }
 
 .pr-3,
@@ -8409,7 +8468,7 @@ button.bg-dark:focus {
 
 .pb-3,
 .py-3 {
-  padding-bottom: 1rem !important;
+  /* padding-bottom: 1rem !important; */
 }
 
 .pl-3,
