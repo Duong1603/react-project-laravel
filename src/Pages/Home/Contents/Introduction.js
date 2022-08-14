@@ -5,7 +5,7 @@ export default class Introduction extends Component {
         return (
             <div>
                 <div className="bg-light">
-                    <div className="page-section py-3 mt-md-n5 custom-index">
+                    {/* <div className="page-section py-3 mt-md-n5 custom-index">
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-md-4 py-3 py-md-0">
@@ -40,7 +40,7 @@ export default class Introduction extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="page-section pb-0">
                         <div className="page-section pb-0" id='small-image'>
                             <div className="container" >

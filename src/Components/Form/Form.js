@@ -46,7 +46,7 @@ export default function Form({ lb }) {
                 />
                 </div>
             </div>
-            <button type="submit" className="btn btn-primary wow zoomIn">
+            <button type="submit" className="btn btn-primary wow zoomIn" style={{margin: "0 auto"}}>
                 Send Message
             </button>
             </form>

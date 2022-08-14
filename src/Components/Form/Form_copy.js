@@ -122,7 +122,7 @@ export default function Form({ data, onSummitForm, onSetForm, form }) {
                 )}
             </div>
             </div>
-            <button type="submit" className="btn btn-primary wow zoomIn">
+            <button type="submit" className="btn btn-primary wow zoomIn" style={{margin: "0 auto"}}>
             Send Message
             </button>
         </form>
