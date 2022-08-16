@@ -56,7 +56,7 @@ export default function FormHandle({ lb,form,setForm,action }) {
                 />
                 </div>
             </div>
-            <button type="submit" className="btn btn-primary wow zoomIn">
+            <button type="submit" className="btn btn-primary wow zoomIn" style={{margin: "0 auto"}}>
                 Send Message
             </button>
             </form>

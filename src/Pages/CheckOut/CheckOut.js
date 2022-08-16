@@ -39,16 +39,16 @@ export default function CheckOut() {
 
     const handleSubmit = () => {
         formatDateAfterClick(state.pick);
-        console.log(form);
+      
         setPreLoad(true);
         submit(form)
         .then((res) => {
-            console.log(res.data);
+        
             setPreLoad(false);
             getModelSuccess(res.data.message).then((result) => history("/"));
         })
         .catch((err) => {
-            console.log(err.response.data);
+       
             setPreLoad(false);
             getModelFail(err.response.data.error);
         });

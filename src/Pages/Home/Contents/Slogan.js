@@ -13,7 +13,7 @@ export default class Slogan extends Component {
                         your actions control the events
                         in life
                     </h1>
-                    <div className='slogan-btn'>
+                    <div className='slogan-btn mb-5'>
                     <button type="button" className="slogan">CHANGE YOUR <br/>THOUGHT NOW</button>
                     </div>
                 </div>

@@ -47,11 +47,10 @@ export default function ReactBigCalendar() {
     const handleClick = () => {
         alert(pick.map(item=>(item.start+item.end)))
     };
-    console.log(pick.length);
+   
 
     const handleSelect = ({ start, end }) => {
-        console.log(start.getDay());
-        console.log(end);
+
         // pass working time
         if (
             (start.getHours() > 8 &&
