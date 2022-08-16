@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Link } from 'react-router-dom';
 const CardLeft = ({ postList }) => {
@@ -18,13 +19,22 @@ const CardLeft = ({ postList }) => {
                   <h5 className="post-title">
                     {post.title}
                   </h5>
+                  {/* <div className="site-info">
+                    <div className="avatar mr-2">
+                      <div className="avatar-img">
+                        <img src="/assets/img/person/person_1.jpg" alt="" />
+                      </div>
+                      <span>Roger Adams</span>
+                    </div>
+                    <span className="mai-time" /> 1 week ago
+                  </div> */}
                 </div>
               </div>
             </Link>
           </div>
         )
       })}
-      <div className="col-12 my-5">
+      {/* <div className="col-12 my-5">
         <nav aria-label="Page Navigation">
           <ul className="pagination justify-content-center">
             <li className="page-item disabled">
@@ -59,8 +69,9 @@ const CardLeft = ({ postList }) => {
             </li>
           </ul>
         </nav>
-      </div>
+      </div> */}
     </div>
   );
 }
 export default CardLeft;
+

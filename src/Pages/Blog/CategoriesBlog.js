@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import Paragraph from "./Paragraph";
+// import Paragraph from "./Paragraph";
 import RecentBlog from "./RecentBlog";
-import TagBlog from "./TagBlog";
+// import TagBlog from "./TagBlog";
 import CardLeft from "./CardLeft";
 import { getBlogs, searchType } from "../../Services/Api/callApi";
 export default function CategoriesBlog() {
@@ -88,8 +88,8 @@ export default function CategoriesBlog() {
           </ul>
         </div>
         <RecentBlog></RecentBlog>
-        <TagBlog></TagBlog>
-        <Paragraph></Paragraph>
+        {/* <TagBlog></TagBlog> */}
+        {/* <Paragraph></Paragraph> */}
       </div>
     </div>
   );

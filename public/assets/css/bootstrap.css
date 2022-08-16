@@ -71,7 +71,12 @@ body {
   text-align: left;
   background-color: #fff;
 }
-
+.webkit-clam{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
