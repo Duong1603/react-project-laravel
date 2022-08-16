@@ -38,8 +38,9 @@ export default function Header() {
         {/* .topbar */}
             <nav className="navbar navbar-expand-lg navbar-light shadow-sm">
                 <div className="container">
-                <Link className="navbar-brand" to={"/"}>
-                    <span className="text-primary">One</span>-Health
+                <Link className="navbar-brand " to={"/"}>
+                    {/* <span className="text-primary">One</span>-Health */}
+                    <img style={{width:'5rem',borderRadius:'10px',}} src="/assets/img/logoPhiPhi.png"/>
                 </Link>
                 {/* <form action="#">
                     <div className="input-group input-navbar">
