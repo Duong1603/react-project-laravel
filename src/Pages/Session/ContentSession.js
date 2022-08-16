@@ -32,7 +32,6 @@ export default function ContentSession() {
   useEffect(() => {
     fetchPackages();
   }, []);
-  console.log(packages);
   return (
     <div className="container-session">
       <MoveToTop />

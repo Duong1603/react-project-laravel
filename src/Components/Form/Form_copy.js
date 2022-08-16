@@ -1,4 +1,5 @@
 import React from "react";
+import "./Form_copy.css";
 
 export default function Form({ data, onSummitForm, onSetForm, form }) {
     const handleSubmit = (e) => {
@@ -65,19 +66,19 @@ export default function Form({ data, onSummitForm, onSetForm, form }) {
                 />
                 </div>
             </div>
-            <div className="col-4">
+            <div className="col-4" id="checkout">
                 <h2>Booking summary</h2>
                 <p>
                 via:<span>google meeting</span>
                 </p>
                 <p>
-                name:<span>google meeting</span>
+                name:<span> {form.name} </span>
                 </p>
                 <p>
-                email:<span>google meeting</span>
+                email:<span> {form.email} </span>
                 </p>
                 <p>
-                phone:<span>google meeting</span>
+                phone:<span> {form.phone} </span>
                 </p>
                 <p>
                 session:
@@ -121,7 +122,7 @@ export default function Form({ data, onSummitForm, onSetForm, form }) {
                 )}
             </div>
             </div>
-            <button type="submit" className="btn btn-primary wow zoomIn">
+            <button type="submit" className="btn btn-primary wow zoomIn" style={{margin: "0 auto"}}>
             Send Message
             </button>
         </form>
