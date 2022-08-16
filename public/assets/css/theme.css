@@ -984,7 +984,8 @@ a.text-dark:focus {
 }
 
 .breadcrumb-dark .breadcrumb-item a {
-  color: #487E81;
+  color: #09474B;
+  /* font-size: 40px; */
 }
 
 .breadcrumb-dark .breadcrumb-item a:hover {
@@ -995,12 +996,12 @@ a.text-dark:focus {
 .breadcrumb-dark .breadcrumb-item+.breadcrumb-item::before {
   display: inline-block;
   padding-right: 0.5rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(5, 55, 57, 0.8);
   content: "/";
 }
 
 .breadcrumb-dark .breadcrumb-item.active {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(237, 237, 237, 0.8);
 }
 
 
@@ -1374,7 +1375,11 @@ a.text-dark:focus {
 
 .page-banner .breadcrumb-item,
 .page-banner .breadcrumb-item a {
-  font-size: 14px;
+  /* font-size: 40px; */
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 .hero-section,
@@ -2005,38 +2010,46 @@ a.text-dark:focus {
     display: flex;
     flex-direction: column;
   }
-  #clients{
+
+  #clients {
     margin-right: 0 !important;
   }
 
   .first-component-mobile {
     display: block !important;
   }
-  .first-component-mobile-title{
+
+  .first-component-mobile-title {
     display: block !important;
   }
+
   .first-component {
     display: none !important;
   }
+
   /*  */
-  .First-profile-mobile{
+  .First-profile-mobile {
     display: flex !important;
     flex-direction: column !important;
   }
-  .Image-profile-mobile{
+
+  .Image-profile-mobile {
     display: flex !important;
     gap: 2rem;
     padding: 2% 0 !important;
   }
-  .Image-profile-mobile img{
+
+  .Image-profile-mobile img {
     width: 8rem;
     height: auto;
   }
-  .name-client-mobile{
+
+  .name-client-mobile {
     display: flex !important;
     align-items: center !important;
   }
-  .Content-profile-mobile{
+
+  .Content-profile-mobile {
     text-align: start !important;
   }
 
@@ -2046,14 +2059,16 @@ a.text-dark:focus {
 }
 
 @media screen and ((max-width: 500px)) {
-  .Image-profile-mobile{
+  .Image-profile-mobile {
     flex-direction: column !important;
     height: auto;
   }
-  .Image-profile-mobile img{
+
+  .Image-profile-mobile img {
     margin: 0 auto;
   }
-  .name-client-mobile{
+
+  .name-client-mobile {
     margin: 0 auto;
   }
 }
@@ -2072,12 +2087,13 @@ a.text-dark:focus {
 
 @media screen and (max-width: 812px) {
   .Container {
-    
+
     padding: 0px;
   }
 }
 
-.first-component-mobile,.first-component-mobile-title {
+.first-component-mobile,
+.first-component-mobile-title {
   display: none;
   margin-top: 5%;
   text-align: center;

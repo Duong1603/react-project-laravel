@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 const CardLeft = ({ postList }) => {
   return (
-    <div className="row">
+    <div className="row CardLeft">
       {postList.map((post, index) => {
         return (
-          <div className="col-sm-6 py-3" key={index}>
+          <div className="col-md-4 py-3" key={index}>
             <Link to={`/blogs/${post.id}`}>
               <div className="card-blog">
                 <div className="header">
@@ -18,15 +18,6 @@ const CardLeft = ({ postList }) => {
                   <h5 className="post-title">
                     {post.title}
                   </h5>
-                  <div className="site-info">
-                    <div className="avatar mr-2">
-                      <div className="avatar-img">
-                        <img src="/assets/img/person/person_1.jpg" alt="" />
-                      </div>
-                      <span>Roger Adams</span>
-                    </div>
-                    <span className="mai-time" /> 1 week ago
-                  </div>
                 </div>
               </div>
             </Link>

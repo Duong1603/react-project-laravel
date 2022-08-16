@@ -48,7 +48,7 @@ export default function CategoriesBlog() {
       </div>
       <div className="col-lg-4">
         <div className="sidebar">
-          <div className="sidebar-block">
+          <div className="sidebar-block search">
             <h3 className="sidebar-title">Search</h3>
             <form onSubmit={handleSearch} className="search-form">
               <div className="form-group">
