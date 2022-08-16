@@ -116,7 +116,7 @@ export default function ContentSession() {
                         </div>
                         <div className="body">
                           <h4 className="text-xl mb-0">{row.name}</h4>
-                          <p>
+                          <p className="webkit-clam">
                             {row.discription.replace(/(.{100})..+/, "$1....")}
                           </p>
                         </div>

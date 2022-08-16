@@ -10,7 +10,7 @@ export default function Banner(props) {
             <div className="container text-center wow fadeInUp">
             <nav aria-label="Breadcrumb">
                 <ol className="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
-                <li className="breadcrumb-item">
+                <li className="breadcrumb-item" id="slides-banner">
                     <Link to="/">Home</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
