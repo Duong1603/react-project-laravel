@@ -3,14 +3,16 @@ import { navLink } from "../../Services/NavLink";
 import { Link } from "react-router-dom";
 export default function Footer() {
     return (
-        <footer className="page-footer ">
-            <div className="container" 
+        <footer className="page-footer">
+            <div className="container page-footer-group" 
             style={{display:'flex',justifyContent:'space-around'}}>
                 {/*  */}
-                <div className="row px-md-3">
+                <div className="row px-md-3 block-left">
                     <div className="">
                         <h3>Phi Phi</h3>
-                        <a href="#"><img style={{width:'9rem',borderRadius:'10px',}} src="/assets/img/logoPhiPhi.png"/></a>
+                        <Link className="navbar-brand " to={"/"}>
+                            <img style={{width:'9rem',borderRadius:'10px',}} src="/assets/img/logoPhiPhi.png"/>
+                        </Link>
                         <div className="footer-sosmed mt-3" style={{display:'flex',gap:'10px'}}>
                             <a href="# " target="_blank">
                                 <span className="mai-logo-facebook-f" />
@@ -31,7 +33,7 @@ export default function Footer() {
                     </div>
                 </div>
                 {/*  */}
-                <div className="row px-md-3" style={{display:'flex',gap:'212px'}}>
+                <div className="row px-md-3 block-right" style={{display:'flex',gap:'212px'}}>
                     <div className="">
                         <h5>Company</h5>
                         <ul className="footer-menu">
