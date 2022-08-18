@@ -1,6 +1,6 @@
 import React from "react";
 import About from "./Contents/About";
-import Contact from "./Contents/Feedback";
+import Feedback from "./Contents/Feedback";
 import Introduction from "./Contents/Introduction";
 import NewPost from "./Contents/NewPost";
 import Slide from "./Contents/Slide";
@@ -15,7 +15,7 @@ export default function Content() {
             <About></About>
             <Work></Work>
             <NewPost></NewPost>
-            <Contact></Contact>
+            <Feedback></Feedback>
             <Slogan></Slogan>
         </>
     );
