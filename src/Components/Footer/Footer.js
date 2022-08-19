@@ -77,7 +77,8 @@ export default function Footer() {
                 <a href="https://www.passerellesnumeriques.org/en/our-actions/vietnam/">
                     Passerelles numériques Vietnam
                 </a>
-                . All right reserved
+                . All right reserve
+                </p> 
                 </p>  */}
             </div>
         </footer>
