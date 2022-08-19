@@ -15,24 +15,6 @@ export default function Detail() {
           <div className="post-thumb">
             <img src="../assets/img/blog/blog_1.jpg" alt="" />
           </div>
-          <div className="post-meta">
-            <div className="post-author">
-              <span className="text-grey">By</span> <a href="#">Admin</a>
-            </div>
-            <span className="divider">|</span>
-            <div className="post-date">
-              <a href="#">22 Jan, 2018</a>
-            </div>
-            <span className="divider">|</span>
-            <div>
-              <a href="#">StreetStyle</a>, <a href="#">Fashion</a>,{" "}
-              <a href="#">Couple</a>
-            </div>
-            <span className="divider">|</span>
-            <div className="post-comment-count">
-              <a href="#">8 Comments</a>
-            </div>
-          </div>
           <h2 className="post-title h1">
             List of Countries without Coronavirus case
           </h2>
@@ -60,16 +42,9 @@ export default function Detail() {
               quis vulputate
             </p>
           </div>
-          <div className="post-tags">
-            <a href="#" className="tag-link">
-              LifeStyle
-            </a>
-            <a href="#" className="tag-link">
-              Food
-            </a>
-            <a href="#" className="tag-link">
-              Coronavirus
-            </a>
+          <div className="post-tags row">
+            <textarea className="textarea col p-3" placeholder="Enter comment................" id="comment" rows={5} name="coronavirus"></textarea>
+            <button type='submit' className='btn btn-primary'>Comment</button>
           </div>
         </article>{" "}
         {/* .blog-details */}
