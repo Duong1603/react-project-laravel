@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Feedback() {
-    const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState([]);
 
-    useEffect(() => {
-        axios.get("http://127.0.0.1:8000/api/comment?numberOfComments=3").then(({ data }) => {
-          console.log(data.data);
-          setComments(data.data)
-        });
-    }, [])
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/api/comment?numberOfComments=2")
+      .then(({ data }) => {
+        console.log(data.data);
+        setComments(data.data);
+      });
+  }, []);
   return (
     <div>
       <div>
@@ -57,20 +59,18 @@ export default function Feedback() {
                 </p>
               </div>
             </div> */}
-            {comments.map((comment)=> {
-                return (
-                  <div className="First-profile">
-                    <div className="Image-profile">
-                      <img src="../assets/img/person/avatar.png" alt="" />
-                    </div>
-                    <div className="Content-profile">
-                      <h2 className="name-client">{comment.user}</h2>
-                      <p className="feedback-client">
-                        {comment.content}
-                      </p>
-                    </div>
+            {comments.map((comment) => {
+              return (
+                <div className="First-profile">
+                  <div className="Image-profile">
+                    <img src="../assets/img/person/avatar.png" alt="" />
                   </div>
-                );
+                  <div className="Content-profile">
+                    <h2 className="name-client">{comment.user}</h2>
+                    <p className="feedback-client">{comment.content}</p>
+                  </div>
+                </div>
+              );
             })}
           </div>
           {/* mobile */}
@@ -121,6 +121,23 @@ export default function Feedback() {
                 </p>
               </div>
             </div> */}
+            {comments.map((comment) => {
+              return (
+                <div className="First-profile First-profile-mobile">
+                  <div className="Image-profile Image-profile-mobile">
+                    <img src="../assets/img/person/avatar.png" alt="" />
+                    <h2 classNameName="name-client name-client-mobile">
+                      {comment.user}
+                    </h2>
+                  </div>
+                  <div className="Content-profile Content-profile-mobile">
+                    <p classNameName="feedback-client feedback-client-mobile">
+                      {comment.content}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

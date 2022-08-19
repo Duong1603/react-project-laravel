@@ -32,6 +32,7 @@ export default function ContentSession() {
   useEffect(() => {
     fetchPackages();
   }, []);
+  console.log(packages);
   return (
     <div className="container-session">
       <MoveToTop />
@@ -108,16 +109,15 @@ export default function ContentSession() {
                           <div className="meta">
                             <Link
                               style={{ width: "100px" }}
-                              to={`/session/${row.id}`}
-                            >
-                              <span>contact</span>
+                              to={`/session/${row.id}`}>
+                              <span>Explore</span>
                             </Link>
                           </div>
                         </div>
                         <div className="body">
                           <h4 className="text-xl mb-0">{row.name}</h4>
                           <p className="webkit-clam">
-                            {row.discription.replace(/(.{100})..+/, "$1....")}
+                            {row.description.replace(/(.{100})..+/, "$1....")}
                           </p>
                         </div>
                       </div>

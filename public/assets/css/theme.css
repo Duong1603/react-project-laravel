@@ -1339,7 +1339,6 @@ a.text-dark:focus {
 
 .page-section {
   position: relative;
-  padding-top: 80px;
   padding-bottom: 80px;
   overflow: hidden;
 }
@@ -2051,10 +2050,6 @@ a.text-dark:focus {
 
   .Content-profile-mobile {
     text-align: start !important;
-  }
-
-  .card-blog {
-    max-width: none;
   }
 }
 

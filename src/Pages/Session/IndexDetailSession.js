@@ -10,6 +10,7 @@ export default function IndexDetailSession() {
     useEffect(() => {
         availableSession(id).then(res=>setPackages(res.data.data)).catch(err=>console.log(err))
     }, []);
+    console.log(packages);
     return (
         <>
             <MoveToTop />
@@ -26,8 +27,8 @@ export default function IndexDetailSession() {
                                 <h1 className='text-about'>{packages.name}</h1>
 
                                 </div>
-                                <div className="rs-prices">
-                                    R$ <span className="pr">{packages.price}</span>
+                                <div className="rs-prices" style={{fontSize:'35px'}}>
+                                    $ <span className="pr">{packages.price}</span>
                                 </div>
                                 <div>
                                     <h3 className="benefits">BENEFITS</h3>
@@ -59,7 +60,7 @@ export default function IndexDetailSession() {
                                         aria-controls="home"
                                         aria-selected="true"
                                     >
-                                        Disciption
+                                        Desciption
                                     </button>
                                 </li>
                                 <li className="nav-item" role="presentation">
@@ -85,7 +86,7 @@ export default function IndexDetailSession() {
                                     role="tabpanel"
                                     aria-labelledby="home-tab"
                                 >
-                                    {packages.discription}
+                                    {packages.description}
                                 </div>
                                 <div
                                     className="tab-pane fade"
