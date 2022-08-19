@@ -68,7 +68,6 @@ export default function CheckOut() {
 
     return (
         <div>
-        <button onClick={handlerClick}>back</button>
         {preLoad ? (
             <PreLoader />
         ) : data.isLoaded ? (
