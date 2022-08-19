@@ -70,7 +70,7 @@ export default function Form({ data, onSummitForm, onSetForm, form }) {
               className="btn btn-primary wow zoomIn mt-3 mb-3 btn-destop"
               style={{ margin: "0 auto" }}
             >
-              Send Message
+              Start
             </button>
           </div>
           <div className="col" id="">
@@ -127,11 +127,11 @@ export default function Form({ data, onSummitForm, onSetForm, form }) {
                 Momo atm
               </>
             )} */}
-            <button
+            {/* <button
               type="submit"
               className="btn btn-primary wow zoomIn btn-mobile mb-3">
               Send Message
-            </button>
+            </button> */}
           </div>
         </div>
       </form>

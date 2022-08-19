@@ -31,6 +31,9 @@ const searchType = async (keyword) => {
 const submit = async (data) => {
     return await axios.post(`${process.env.REACT_APP_API_KEY}/add-booking`,data);
 };
+const feedbackCustomer = async (query)=>{
+    return await axios.get(`${process.env.REACT_APP_API_KEY}/comment?${query}`)
+}
 export {
     availableSession,
     apiBooked,
@@ -38,5 +41,6 @@ export {
     calculateFeeQr,
     getBlogs,
     searchType,
-    submit
+    submit,
+    feedbackCustomer
 };
