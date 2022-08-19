@@ -71,14 +71,14 @@ export default function Footer() {
                     
                     </div>
                 </div>
-                {/* <hr /> */}
-                {/* <p id="copyright">
+                <hr />
+                <p id="copyright">
                 Copyright © 2022{" "}
                 <a href="https://www.passerellesnumeriques.org/en/our-actions/vietnam/">
                     Passerelles numériques Vietnam
                 </a>
                 . All right reserved
-                </p> */}
+                </p> 
             </div>
         </footer>
     );
