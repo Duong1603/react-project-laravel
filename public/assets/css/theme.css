@@ -1339,7 +1339,6 @@ a.text-dark:focus {
 
 .page-section {
   position: relative;
-  padding-top: 80px;
   padding-bottom: 80px;
   overflow: hidden;
 }
@@ -2003,74 +2002,6 @@ a.text-dark:focus {
   grid-template-columns: 38% 62%;
   padding: 55px 144px;
   background-color: #09474B;
-}
-
-@media screen and ((max-width: 1366px)) {
-  .Container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #clients {
-    margin-right: 0 !important;
-  }
-
-  .first-component-mobile {
-    display: block !important;
-  }
-
-  .first-component-mobile-title {
-    display: block !important;
-  }
-
-  .first-component {
-    display: none !important;
-  }
-
-  /*  */
-  .First-profile-mobile {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .Image-profile-mobile {
-    display: flex !important;
-    gap: 2rem;
-    padding: 2% 0 !important;
-  }
-
-  .Image-profile-mobile img {
-    width: 8rem;
-    height: auto;
-  }
-
-  .name-client-mobile {
-    display: flex !important;
-    align-items: center !important;
-  }
-
-  .Content-profile-mobile {
-    text-align: start !important;
-  }
-
-  .card-blog {
-    max-width: none;
-  }
-}
-
-@media screen and ((max-width: 500px)) {
-  .Image-profile-mobile {
-    flex-direction: column !important;
-    height: auto;
-  }
-
-  .Image-profile-mobile img {
-    margin: 0 auto;
-  }
-
-  .name-client-mobile {
-    margin: 0 auto;
-  }
 }
 
 @media screen and (min-width: 1024px) and ((max-width: 1366px)) {

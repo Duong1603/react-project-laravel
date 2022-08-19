@@ -1,9 +1,30 @@
-h2{color: #09474B;}
+h2 {
+  color: #09474B;
+}
 
 span:hover {
-    color: red;
+  color: red;
+}
+
+#checkout {
+  margin-left: 30px;
+}
+
+.btn-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .block-mobile{
+    display: flex;
+    flex-direction: column;
   }
 
-#checkout{
-    margin-left: 30px;
+  .btn-destop {
+    display: none;
+  }
+
+  .btn-mobile {
+    display: block;
+  }
 }

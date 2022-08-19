@@ -27,7 +27,7 @@ export default function CategoriesBlog() {
         handleSumPost(cateList);
       })
     );
-  };  
+  };
   const handleSumPost = (cateList)=>{
     var result = cateList.reduce(function (acc, category ) { return acc + category.total; }, 0);
     setTotalPost(result);
@@ -37,9 +37,7 @@ export default function CategoriesBlog() {
     searchType(titleSK).then((res) => {
       const postList = res.data.data;
       setData({ ...data, postList, isLoaded: true });
-
     });
-
   };
   return (
     <div className="row">
