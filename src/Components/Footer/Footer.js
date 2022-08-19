@@ -78,7 +78,7 @@ export default function Footer() {
                     Passerelles numériques Vietnam
                 </a>
                 . All right reserved
-                </p> */}
+                </p> 
             </div>
         </footer>
     );
