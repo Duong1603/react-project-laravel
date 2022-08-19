@@ -21,7 +21,7 @@ export default function CategoriesBlog() {
   const getData = async (id) => {
     getBlogs(id).then(
       axios.spread((res1, res2) => {
-        const postList = res1.data.data;
+        const postList = res1.data;
         const cateList = res2.data.data;
         setData({ postList, cateList, isLoaded: true });
         handleSumPost(cateList);
@@ -56,7 +56,7 @@ export default function CategoriesBlog() {
                   type="text"
                   className="form-control"
                   placeholder="Type a keyword and hit enter"
-                  name="title"
+                  name="search"
                   id="inputPassword"
                   onChange={(e) => setTitleSK(e.target.value)}
                 />
@@ -87,7 +87,7 @@ export default function CategoriesBlog() {
             })}
           </ul>
         </div>
-        <RecentBlog></RecentBlog>
+        {/* <RecentBlog></RecentBlog> */}
         {/* <TagBlog></TagBlog> */}
         {/* <Paragraph></Paragraph> */}
       </div>

@@ -2129,14 +2129,18 @@ a.text-dark:focus {
   padding: 2%;
 
 }
-
+.Content-profile {
+  width: 100%;
+  padding-right: 1rem;
+}
 .feedback-client {
   color: #487E81;
   font-size: 1.15rem;
+  text-align: justify;
 }
 
 .name-client {
-  color: white;
+  /* color: white; */
   font-size: 1.5rem;
 }
 

@@ -13,8 +13,10 @@ const calculateFeeQr = async () => {
     return await axios.get(`${process.env.REACT_APP_API_KEY}/payment-qr`);
 };
 const getBlogs = async (id) => {
+
     const requestBlogs = axios.get(
-        `${process.env.REACT_APP_API_KEY}/posts/search?${id ? `cateId=${id}` : ""}`
+        // `${process.env.REACT_APP_API_KEY}/posts`
+        `${process.env.REACT_APP_API_KEY}/posts/`
     );
     const requestCategories = axios.get(
         `${process.env.REACT_APP_API_KEY}/categories`
