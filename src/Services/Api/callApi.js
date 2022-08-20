@@ -15,7 +15,6 @@ const calculateFeeQr = async () => {
 const getBlogs = async (id) => {
 
     const requestBlogs = axios.get(
-        // `${process.env.REACT_APP_API_KEY}/posts`
         `${process.env.REACT_APP_API_KEY}/posts/`
     );
     const requestCategories = axios.get(
@@ -34,6 +33,9 @@ const submit = async (data) => {
 const feedbackCustomer = async (query)=>{
     return await axios.get(`${process.env.REACT_APP_API_KEY}/comment?${query}`)
 }
+const getPackages = async ()=>{
+    return await axios.get(`${process.env.REACT_APP_API_KEY}/package`)
+}
 export {
     availableSession,
     apiBooked,
@@ -42,5 +44,6 @@ export {
     getBlogs,
     searchType,
     submit,
-    feedbackCustomer
+    feedbackCustomer,
+    getPackages
 };
