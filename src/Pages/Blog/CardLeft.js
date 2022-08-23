@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 const CardLeft = ({ postList }) => {
   return (
     <div className="row CardLeft">
@@ -12,12 +12,13 @@ const CardLeft = ({ postList }) => {
                   <div className="post-category">
                     <a href="#">{post.nameCategory}</a>
                   </div>
-                  <img src={'/assets/img/blog/' + post.image} alt="" />
+                  <img
+                    src={"./assets/img/blog/" + post.image}
+                    alt=""
+                  />
                 </div>
                 <div className="body">
-                  <h5 className="post-title">
-                    {post.title}
-                  </h5>
+                  <h5 className="post-title">{post.title}</h5>
                   {/* <div className="site-info">
                     <div className="avatar mr-2">
                       <div className="avatar-img">
@@ -31,7 +32,7 @@ const CardLeft = ({ postList }) => {
               </div>
             </Link>
           </div>
-        )
+        );
       })}
       {/* <div className="col-12 my-5">
         <nav aria-label="Page Navigation">
@@ -71,6 +72,5 @@ const CardLeft = ({ postList }) => {
       </div> */}
     </div>
   );
-}
+};
 export default CardLeft;
-
