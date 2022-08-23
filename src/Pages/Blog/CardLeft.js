@@ -13,8 +13,9 @@ const CardLeft = ({ postList }) => {
                     <a href="#">{post.nameCategory}</a>
                   </div>
                   <img
-                    src={"./assets/img/blog/" + post.image}
+                    src={`http://localhost:8000/img/` + post.image}
                     alt=""
+                    style={{width:265, height:150}}
                   />
                 </div>
                 <div className="body">
