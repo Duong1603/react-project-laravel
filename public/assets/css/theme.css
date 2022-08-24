@@ -1554,11 +1554,11 @@ a.text-dark:focus {
   overflow: hidden;
 }
 
-.card-blog .header {
-  width: 100%;
-  height: 140px;
+.card-blog .header img{
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
   background-color: #9A9F97;
-  overflow: hidden;
 }
 
 .card-blog .header .post-thumb {
