@@ -22,12 +22,13 @@ const ReadMore = ({ children }) => {
 };
 
 export default function ContentSession() {
-
   const [packages, setPackages] = useState([]);
   const fetchPackages = async () => {
-    await axios.get(`${process.env.REACT_APP_API_KEY}/package`).then(({ data }) => {
-      setPackages(data.data);
-    });
+    await axios
+      .get(`${process.env.REACT_APP_API_KEY}/package`)
+      .then(({ data }) => {
+        setPackages(data.data);
+      });
   };
   useEffect(() => {
     fetchPackages();
@@ -109,7 +110,8 @@ export default function ContentSession() {
                           <div className="meta">
                             <Link
                               style={{ width: "100px" }}
-                              to={`/session/${row.id}`}>
+                              to={`/session/${row.id}`}
+                            >
                               <span>Explore</span>
                             </Link>
                           </div>
