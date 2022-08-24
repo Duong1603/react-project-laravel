@@ -10,13 +10,9 @@ const CardLeft = ({ postList }) => {
               <div className="card-blog">
                 <div className="header">
                   <div className="post-category">
-                    <a href="#">{post.nameCategory}</a>
+                    <a href="#">{post.name}</a>
                   </div>
-                  <img
-                    src={`http://localhost:8000/img/` + post.image}
-                    alt=""
-                    style={{width:265, height:150}}
-                  />
+                  <img src={'http://localhost:8000/img/' + post.image} alt="" />
                 </div>
                 <div className="body">
                   <h5 className="post-title">{post.title}</h5>

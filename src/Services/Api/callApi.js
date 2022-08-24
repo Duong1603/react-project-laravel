@@ -12,10 +12,14 @@ const calculateFee = async () => {
 const calculateFeeQr = async () => {
     return await axios.get(`${process.env.REACT_APP_API_KEY}/payment-qr`);
 };
+
+const DetailsBlogs = async (id) => {
+    return await axios.get(`${process.env.REACT_APP_API_KEY}/posts/${id}`);
+};
+
 const getBlogs = async (id) => {
 
     const requestBlogs = axios.get(
-        // `${process.env.REACT_APP_API_KEY}/posts`
         `${process.env.REACT_APP_API_KEY}/posts/`
     );
     const requestCategories = axios.get(
@@ -39,6 +43,7 @@ export {
     apiBooked,
     calculateFee,
     calculateFeeQr,
+    DetailsBlogs,
     getBlogs,
     searchType,
     submit,
