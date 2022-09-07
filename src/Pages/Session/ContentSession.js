@@ -64,71 +64,71 @@ const [packages, setPackages] = useState([]);
                 Our subconscious mind gives rise to epiphanies and brilliant ideas
                 </p>
 
-                <p className="text mb wow fadeInUp">
-                -We learn to navigate life with conscious minds but changes
-                directed by the conscious mind have limits. Will power alone
-                cannot break the chain of bad habits. We find ourselves making the
-                same New Years Resolution time and again. To change, we need to
-                connect with the subconscious mind.
-                </p>
-                <ReadMore className="textSession">
-                -RTT gets you unstuck very quickly and easily by accessing your
-                subconscious mind using hypnosis. Hypnotic trance is a completely
-                natural state of inward focus. In hypnosis you are so absorbed,
-                you’re not worrying about anything else. The heightened state of
-                focus gives your mind more control. The critical chattering mind
-                is bypassed. RTT helps your subconscious mind become receptive and
-                more suggestible. RTT helps you change perceptions and thoughts at
-                the subconscious level. Positive suggestions like seeds are
-                planted in the subconscious mind. New beliefs are able to take
-                root, typically within 1 session and no more than three. RTT uses
-                words that spark imaginations. Words are customized just for you.
-                With RTT you’re easily, effortlessly, happily break free from what
-                was weighing you down
-                </ReadMore>
-            </div>
-            <h1 className="text-center wow fadeInUp" id="tile-item-name">
-                Our Sessions
-            </h1>
-            <p className="text mb-5 wow fadeInUp">
-                We are a collective of health and wellness professionals based in
-                Ubud, Bali, Indonesia bringing you a variety of 1-1 private session
-                or bespoke group offerings designed to help you discover the new
-                version of you that you’ve always wanted to be.
+            <p className="text mb wow fadeInUp">
+              -We learn to navigate life with conscious minds but changes
+              directed by the conscious mind have limits. Will power alone
+              cannot break the chain of bad habits. We find ourselves making the
+              same New Years Resolution time and again. To change, we need to
+              connect with the subconscious mind.
             </p>
-            <div className="col-lg-12 mt-5">
-                <div className="row justify-content-center">
-                {packages.length > 0 &&
-                    packages.map((row, key) => (
-                    <div key={key} className=" col-lg-4 zoomIn">
-                        <Link to={`/session/${row.id}`}>
-                        <div className="card-doctor">
-                            <div className="header">
-                            <img src={row.image} alt="..." />
-                            <div className="meta">
-                                <Link
-                                style={{ width: "100px" }}
-                                to={`/session/${row.id}`}
-                                >
-                                <span>Explore</span>
-                                </Link>
-                            </div>
-                            </div>
-                            <div className="body">
-                            <h4 className="text-xl mb-0">{row.name}</h4>
-                            <p className="webkit-clam">
-                                {row.description.replace(/(.{100})..+/, "$1....")}
-                            </p>
-                            </div>
+            <ReadMore className="textSession">
+              -RTT gets you unstuck very quickly and easily by accessing your
+              subconscious mind using hypnosis. Hypnotic trance is a completely
+              natural state of inward focus. In hypnosis you are so absorbed,
+              you’re not worrying about anything else. The heightened state of
+              focus gives your mind more control. The critical chattering mind
+              is bypassed. RTT helps your subconscious mind become receptive and
+              more suggestible. RTT helps you change perceptions and thoughts at
+              the subconscious level. Positive suggestions like seeds are
+              planted in the subconscious mind. New beliefs are able to take
+              root, typically within 1 session and no more than three. RTT uses
+              words that spark imaginations. Words are customized just for you.
+              With RTT you’re easily, effortlessly, happily break free from what
+              was weighing you down
+            </ReadMore>
+          </div>
+          <h1 className="text-center wow fadeInUp" id="tile-item-name">
+            Our Sessions
+          </h1>
+          <p className="text mb-5 wow fadeInUp">
+            We are a collective of health and wellness professionals based in
+            Ubud, Bali, Indonesia bringing you a variety of 1-1 private session
+            or bespoke group offerings designed to help you discover the new
+            version of you that you’ve always wanted to be.
+          </p>
+          <div className="col-lg-12 mt-5">
+            <div className="row justify-content-center">
+              {packages.length > 0 &&
+                packages.map((row, key) => (
+                  <div key={key} className=" col-lg-4 zoomIn">
+                    <Link to={`/session/${row.id}`}>
+                      <div className="card-doctor">
+                        <div className="header">
+                          <img src={row.image} alt="..." />
+                          <div className="meta">
+                            <Link
+                              style={{ width: "100px" }}
+                              to={`/session/${row.id}`}
+                            >
+                              <span>Explore</span>
+                            </Link>
+                          </div>
                         </div>
-                        </Link>
-                    </div>
-                    ))}
-                </div>
-            </div>
+                        <div className="body">
+                          <h4 className="text-xl mb-0">{row.name}</h4>
+                          <p className="webkit-clam">
+                            {row.description.replace(/(.{100})..+/, "$1....")}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                ))}
             </div>
         </div>
         <div className="style-hr"></div>
         </div>
+        </div>
+      </div>
     );
 }

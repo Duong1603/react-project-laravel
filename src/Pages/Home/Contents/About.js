@@ -26,7 +26,7 @@ export default class About extends Component {
                   and phobias.
                 </p>
                 <Link className="btn btn-primary" to={"/session"}>
-                    Read More
+                  Read More
                 </Link>
               </div>
               <div className="col-lg-7 wow fadeInRight" data-wow-delay="400ms">
