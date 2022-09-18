@@ -23,8 +23,10 @@
 
 body {
   /* font-family: "Source Sans Pro", sans-serif; */
+  font-family: 'Rubik', sans-serif;
   line-height: 1.5;
   color: #343531;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 a {

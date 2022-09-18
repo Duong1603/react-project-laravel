@@ -10,7 +10,7 @@ export default function IndexDetailSession() {
     useEffect(() => {
         availableSession(id).then(res=>setPackages(res.data.data)).catch(err=>console.log(err))
     }, []);
-    console.log(packages);
+    console.log(packages.image);
     return (
         <>
             <MoveToTop />
@@ -19,7 +19,7 @@ export default function IndexDetailSession() {
                         <div className="row align-items-center">
                             <div className="col-lg-7 wow fadeInRight" data-wow-delay="400ms">
                                 <div className="img-place custom-img-1">
-                                    <img src="../assets/img/bg_3.jpg" alt="" />
+                                    <img src={packages.image} alt="" />
                                 </div>
                             </div>
                             <div className="col-lg-5 py-3 wow fadeInUp">
@@ -31,13 +31,13 @@ export default function IndexDetailSession() {
                                     $ <span className="pr">{packages.price}</span>
                                 </div>
                                 <div>
-                                    <h3 className="benefits">BENEFITS</h3>
+                                    {/* <h3 className="benefits">BENEFITS</h3>
                                     <ul>
                                         <li>Apples are nutricious</li>
                                         <li> Apples may be good for weight loss</li>
                                         <li>  Apples may be good for bone health</li>
                                         <li>  They're linked to a lowest risk of diabetes</li>
-                                    </ul>
+                                    </ul> */}
 
                                 </div>
                                 <Link to={`/booking/${id}`} className="btn btn-primary btn-color">Book now</Link>
